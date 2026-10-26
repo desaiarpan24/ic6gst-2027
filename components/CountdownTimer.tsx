@@ -58,12 +58,12 @@ export default function CountdownTimer({
       }`}>
         {label}
       </p>
-      <div className="flex items-center justify-center gap-3 sm:gap-6">
+      <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
         {units.map((unit, idx) => (
-          <div key={unit.label} className="flex items-center gap-3 sm:gap-6">
+          <div key={unit.label} className="flex items-center gap-2 sm:gap-3 md:gap-4">
             <div className="flex flex-col items-center">
               <div
-                className={`w-16 h-16 sm:w-24 sm:h-24 rounded-xl flex items-center justify-center text-2xl sm:text-4xl font-black tabular-nums ${
+                className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-xl flex items-center justify-center text-2xl sm:text-4xl font-black tabular-nums ${
                   dark
                     ? "bg-white/10 text-white border border-white/20"
                     : "bg-navy text-teal-accent border border-teal-DEFAULT/30"

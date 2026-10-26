@@ -45,7 +45,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/60 via-navy-dark/40 to-navy-dark" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 w-full">
-          <div className="max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 xl:col-span-7">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-DEFAULT/20 border border-teal-DEFAULT/40 mb-8">
               <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
@@ -93,9 +95,12 @@ export default function HomePage() {
           </div>
 
           {/* Countdown - bottom right */}
-          <div className="mt-16 lg:mt-0 lg:absolute lg:right-6 lg:bottom-20 p-6 rounded-2xl bg-white/5 backdrop-blur border border-white/10 glow-teal">
-            <CountdownTimer dark />
+          <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end">
+            <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 glow-teal shadow-2xl">
+              <CountdownTimer dark />
+            </div>
           </div>
+        </div>
         </div>
       </section>
 
