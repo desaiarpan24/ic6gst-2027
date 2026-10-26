@@ -137,7 +137,7 @@ export default function ContactPage() {
                   <div className="text-6xl mb-4">✅</div>
                   <h3 className="font-bold text-navy text-2xl mb-3">Message Sent!</h3>
                   <p className="text-slate-light leading-relaxed">
-                    Thank you for reaching out. We'll get back to you within 2–3 working days.
+                    Thank you for reaching out. We&apos;ll get back to you within 2–3 working days.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}

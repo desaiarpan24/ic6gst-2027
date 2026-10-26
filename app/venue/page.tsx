@@ -55,7 +55,7 @@ export default function VenuePage() {
               Venue &amp; <span className="gradient-text">City</span>
             </h1>
             <p className="text-gray-300 text-xl max-w-2xl mx-auto">
-              PDEU, Gandhinagar — the "Tree City of India" and administrative capital of Gujarat.
+              PDEU, Gandhinagar — the &ldquo;Tree City of India&rdquo; and administrative capital of Gujarat.
             </p>
           </AnimatedSection>
         </div>
@@ -72,11 +72,11 @@ export default function VenuePage() {
               <p className="text-slate-body leading-relaxed mb-5">
                 Gandhinagar is the capital city of Gujarat, India — a planned city located 23 km north of
                 Ahmedabad. Named after Mahatma Gandhi, it is one of the greenest cities in Asia, often
-                called the <strong className="text-navy">"Tree City of India"</strong> for its remarkable green cover.
+                called the <strong className="text-navy">&ldquo;Tree City of India&rdquo;</strong> for its remarkable green cover.
               </p>
               <p className="text-slate-body leading-relaxed mb-5">
-                The city is home to India's premier institutions including IIT Gandhinagar, NIFT, GIFT City
-                (India's first operational smart city), and PDEU. Its proximity to Ahmedabad gives delegates
+                The city is home to India&apos;s premier institutions including IIT Gandhinagar, NIFT, GIFT City
+                (India&apos;s first operational smart city), and PDEU. Its proximity to Ahmedabad gives delegates
                 access to world-class hospitality, dining, and cultural experiences.
               </p>
               <div className="flex flex-col gap-3">
@@ -118,7 +118,7 @@ export default function VenuePage() {
               <h2 className="text-4xl font-black text-navy mt-3 mb-4">PDEU Campus</h2>
               <div className="section-divider mx-auto mb-6" />
               <p className="text-slate-light max-w-2xl mx-auto">
-                The conference will be held at the Department of ICT, PDEU's 100-acre green campus in Gandhinagar.
+                The conference will be held at the Department of ICT, PDEU&apos;s 100-acre green campus in Gandhinagar.
               </p>
             </div>
           </AnimatedSection>

@@ -154,7 +154,7 @@ export default function RegistrationPage() {
             <AnimatedSection delay={0.2}>
               <div className="p-6 rounded-2xl border border-teal-DEFAULT/20 bg-teal-DEFAULT/5 h-full">
                 <h3 className="font-bold text-navy text-lg mb-4 flex items-center gap-2">
-                  <Gift size={20} className="text-teal-DEFAULT" /> What's Included
+                  <Gift size={20} className="text-teal-DEFAULT" /> What&apos;s Included
                 </h3>
                 <ul className="space-y-3">
                   {[

@@ -62,7 +62,7 @@ export default function AboutPage() {
                 and sustainable ICT-driven solutions for societal challenges.
               </p>
               <p className="text-slate-body leading-relaxed mb-5">
-                The conference theme — <strong className="text-navy">"Towards 6G and Beyond: Intelligent, Secure and Sustainable"</strong> —
+                The conference theme — <strong className="text-navy">&ldquo;Towards 6G and Beyond: Intelligent, Secure and Sustainable&rdquo;</strong> —
                 reflects the convergence of transformative technologies that will define the next decade of digital infrastructure.
               </p>
               <p className="text-slate-body leading-relaxed">
@@ -123,7 +123,7 @@ export default function AboutPage() {
               <p className="text-slate-body leading-relaxed mb-5">
                 Established in 2007 by the Government of Gujarat, Pandit Deendayal Energy University (formerly PDPU)
                 is a premier technical university spread across a 100-acre green campus in Gandhinagar — the planned
-                capital of Gujarat, known as the "Tree City of India."
+                capital of Gujarat, known as the &ldquo;Tree City of India.&rdquo;
               </p>
               <p className="text-slate-body leading-relaxed mb-8">
                 Accredited with NAAC A++ grade, PDEU is a centre of excellence in energy, technology, and management.
@@ -239,8 +239,8 @@ export default function AboutPage() {
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">
                     A flagship industry-academia interaction session featuring C-suite executives and R&D heads
-                    from India's leading telecom, semiconductor, and technology companies. Discussions will
-                    cover India's 6G roadmap, indigenous technology development under the Bharat 6G Vision, and
+                    from India&apos;s leading telecom, semiconductor, and technology companies. Discussions will
+                    cover India&apos;s 6G roadmap, indigenous technology development under the Bharat 6G Vision, and
                     startup ecosystem opportunities in next-generation wireless.
                   </p>
                   <div className="mt-5 flex flex-wrap gap-2">
