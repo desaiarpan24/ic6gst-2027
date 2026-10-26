@@ -12,20 +12,24 @@ export default function Logo({ className = "h-10 w-auto", inverted = false }: Lo
 
   if (error) {
     return (
-      <div className={`flex items-center justify-center font-black rounded-lg px-2 py-1 ${
-        inverted ? "bg-teal-DEFAULT/20 text-teal-accent border border-teal-DEFAULT/30" : "bg-navy text-white"
-      }`}>
+      <div
+        className={`flex items-center justify-center font-black rounded-lg px-2 py-1 ${
+          inverted ? "bg-teal-DEFAULT/20 text-teal-accent border border-teal-DEFAULT/30" : "bg-navy text-white"
+        }`}
+      >
         <span className="text-sm tracking-wider">PDEU</span>
       </div>
     );
   }
 
   return (
-    <img
-      src="https://www.pdpu.ac.in/images/pdpu-logo.png"
-      alt="PDEU Logo"
-      className={`${className} object-contain ${inverted ? "brightness-0 invert" : ""}`}
-      onError={() => setError(true)}
-    />
+    <div className={inverted ? "bg-white rounded-lg p-1 inline-flex items-center justify-center shadow-sm" : "inline-flex items-center"}>
+      <img
+        src="/pdeu-logo.png"
+        alt="PDEU Logo"
+        className={`${className} object-contain`}
+        onError={() => setError(true)}
+      />
+    </div>
   );
 }
