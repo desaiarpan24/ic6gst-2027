@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 const newsItems = [
   "🔔 Call for Papers is now OPEN! Submit your research to IC6GST 2027",
   "📅 Special Session Proposals due March 15, 2027",
-  "🏆 Best Paper Awards in all 8 Technical Tracks",
+  "🏆 Best Paper Awards in all 5 Technical Tracks",
   "🌐 IEEE Xplore® publication for accepted papers",
   "🎯 Full Paper Submission Deadline: May 31, 2027",
   "🚀 6G and Beyond Workshop — Exclusive Industry Session",
 ];
 
 const highlights = [
-  { icon: Zap, title: "8 Technical Tracks", desc: "Spanning AI, 6G, Cybersecurity, VLSI, Edge Computing, and Sustainability" },
+  { icon: Zap, title: "5 Technical Tracks", desc: "Spanning AI, 6G, Cybersecurity, VLSI & RF Hardware, and Sustainable Technologies" },
   { icon: Radio, title: "6G & Beyond", desc: "Exclusive workshops and industry sessions on next-gen wireless communication" },
   { icon: Cpu, title: "IEEE Publication", desc: "Accepted papers published in IEEE Xplore® Digital Library" },
   { icon: Globe, title: "Global Participation", desc: "Researchers, engineers, and industry leaders from across the globe" },
@@ -27,7 +27,7 @@ const highlights = [
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center bg-navy-dark overflow-hidden">
         {/* Background image */}
@@ -44,63 +44,81 @@ export default function HomePage() {
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/60 via-navy-dark/40 to-navy-dark" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 xl:col-span-7">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-DEFAULT/20 border border-teal-DEFAULT/40 mb-8">
-              <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
-              <span className="text-teal-accent text-sm font-semibold uppercase tracking-wider">October 2–3, 2027</span>
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-DEFAULT/20 border border-teal-DEFAULT/40 mb-6">
+                <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
+                <span className="text-teal-accent text-xs sm:text-sm font-semibold uppercase tracking-wider">October 2–3, 2027</span>
+              </div>
+
+              {/* Title with distinct fonts highlighting IC, 6G, ST */}
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-none mb-4 tracking-tight">
+                <span className="font-ic text-cyan-400 inline-block hover:scale-105 transition-transform" title="Intelligent Computing">IC</span>
+                <span className="font-6g text-teal-accent inline-block mx-0.5 hover:scale-105 transition-transform tracking-wider" title="6G & Beyond Communication">6G</span>
+                <span className="font-st text-emerald-400 inline-block hover:scale-105 transition-transform" title="Sustainable Technologies">ST</span>
+                <span className="block gradient-text">2027</span>
+              </h1>
+
+              {/* Domain Breakdown Badges */}
+              <div className="flex flex-wrap items-center gap-2 mb-6 text-xs sm:text-sm">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 font-ic">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                  <strong className="font-bold">IC:</strong> Intelligent Computing
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-accent font-6g">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
+                  <strong className="font-bold">6G:</strong> 6G &amp; Beyond
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 font-st">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  <strong className="font-bold">ST:</strong> Sustainable Tech
+                </span>
+              </div>
+
+              <p className="text-lg sm:text-2xl text-gray-300 font-light mb-6 leading-relaxed">
+                Towards 6G and Beyond: <span className="text-teal-accent font-semibold block sm:inline">Intelligent, Secure and Sustainable</span>
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-gray-400 text-sm mb-8">
+                <div className="flex items-center gap-2">
+                  <Calendar size={16} className="text-teal-DEFAULT flex-shrink-0" />
+                  <span>October 2–3, 2027 (Physical Conference)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin size={16} className="text-teal-DEFAULT flex-shrink-0" />
+                  <span>PDEU, Gandhinagar, Gujarat, India</span>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/call-for-papers"
+                  id="cta-submit-paper"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-2xl hover:shadow-teal-DEFAULT/40 hover:-translate-y-1 text-base sm:text-lg"
+                >
+                  Submit Paper <ArrowRight size={20} />
+                </Link>
+                <Link
+                  href="/key-dates"
+                  id="cta-key-dates"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold rounded-full hover:border-teal-accent hover:text-teal-accent transition-all hover:-translate-y-1 text-base sm:text-lg"
+                >
+                  View Key Dates <Calendar size={20} />
+                </Link>
+              </div>
             </div>
 
-            {/* Title */}
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black text-white leading-none mb-6">
-              IC6GST
-              <span className="block gradient-text">2027</span>
-            </h1>
-
-            <p className="text-xl sm:text-2xl text-gray-300 font-light mb-4 leading-relaxed">
-              Towards 6G and Beyond: <span className="text-teal-accent font-semibold">Intelligent, Secure and Sustainable</span>
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 text-gray-400 text-sm mb-10">
-              <div className="flex items-center gap-2">
-                <Calendar size={16} className="text-teal-DEFAULT" />
-                <span>October 2–3, 2027 (Physical Conference)</span>
+            {/* Right Column: Countdown / Paper Deadline Box - 100% bounded */}
+            <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end w-full min-w-0">
+              <div className="w-full max-w-sm sm:max-w-md p-4 sm:p-6 lg:p-7 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 glow-teal shadow-2xl overflow-hidden">
+                <CountdownTimer dark />
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin size={16} className="text-teal-DEFAULT" />
-                <span>PDEU, Gandhinagar, Gujarat, India</span>
-              </div>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/call-for-papers"
-                id="cta-submit-paper"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-2xl hover:shadow-teal-DEFAULT/40 hover:-translate-y-1 text-lg"
-              >
-                Submit Paper <ArrowRight size={20} />
-              </Link>
-              <Link
-                href="/key-dates"
-                id="cta-key-dates"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold rounded-full hover:border-teal-accent hover:text-teal-accent transition-all hover:-translate-y-1 text-lg"
-              >
-                View Key Dates <Calendar size={20} />
-              </Link>
             </div>
           </div>
-
-          {/* Countdown - bottom right */}
-          <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end">
-            <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 glow-teal shadow-2xl">
-              <CountdownTimer dark />
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 
@@ -113,6 +131,62 @@ export default function HomePage() {
                 {item}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* KEY DATES TIMELINE SUMMARY — Within Boundary */}
+      <section className="py-14 bg-navy-dark border-t border-b border-teal-DEFAULT/20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="text-center mb-8">
+              <span className="text-teal-accent font-semibold uppercase tracking-widest text-xs">Milestones</span>
+              <h2 className="text-2xl sm:text-3xl font-black text-white mt-1 mb-2">
+                Important <span className="gradient-text">Timeline</span>
+              </h2>
+              <div className="section-divider mx-auto" />
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {[
+              { label: "Proposals Due", date: "March 15, 2027", icon: "📝", status: "Upcoming" },
+              { label: "Paper Submission", date: "May 31, 2027", icon: "📄", status: "Deadline", highlight: true },
+              { label: "Notification", date: "July 15, 2027", icon: "✉️", status: "Upcoming" },
+              { label: "Conference Days", date: "Oct 2–3, 2027", icon: "🎉", status: "Main Event" },
+            ].map((milestone, i) => (
+              <AnimatedSection key={milestone.label} delay={i * 0.1}>
+                <div
+                  className={`p-5 rounded-2xl border text-center transition-all h-full ${
+                    milestone.highlight
+                      ? "bg-teal-DEFAULT/15 border-teal-DEFAULT/50 shadow-lg shadow-teal-DEFAULT/10"
+                      : "bg-white/5 border-white/10"
+                  }`}
+                >
+                  <div className="text-2xl mb-2">{milestone.icon}</div>
+                  <span
+                    className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2 ${
+                      milestone.highlight
+                        ? "bg-red-500/20 text-red-300 border border-red-500/40"
+                        : "bg-teal-DEFAULT/20 text-teal-accent"
+                    }`}
+                  >
+                    {milestone.status}
+                  </span>
+                  <p className="text-white font-bold text-sm">{milestone.label}</p>
+                  <p className="text-teal-accent font-semibold text-xs mt-1">{milestone.date}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <div className="text-center mt-6">
+            <Link
+              href="/key-dates"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-teal-accent hover:text-white font-semibold transition-colors"
+            >
+              View Full Conference Schedule &amp; Deadlines <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
@@ -200,12 +274,12 @@ export default function HomePage() {
                   </div>
                 </div>
                 {/* Stats badge */}
-                <div className="absolute -top-4 -right-4 bg-teal-DEFAULT text-white p-4 rounded-2xl shadow-xl">
-                  <p className="text-3xl font-black">8</p>
+                <div className="absolute -top-3 right-3 sm:-top-4 sm:-right-4 bg-teal-DEFAULT text-white p-3.5 sm:p-4 rounded-2xl shadow-xl">
+                  <p className="text-2xl sm:text-3xl font-black">5</p>
                   <p className="text-xs font-semibold">Tech Tracks</p>
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-navy text-white p-4 rounded-2xl shadow-xl">
-                  <p className="text-3xl font-black text-teal-accent">2</p>
+                <div className="absolute -bottom-3 left-3 sm:-bottom-4 sm:-left-4 bg-navy text-white p-3.5 sm:p-4 rounded-2xl shadow-xl">
+                  <p className="text-2xl sm:text-3xl font-black text-teal-accent">2</p>
                   <p className="text-xs font-semibold">Conference Days</p>
                 </div>
               </div>

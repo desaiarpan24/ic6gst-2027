@@ -66,7 +66,7 @@ export default function AboutPage() {
                 reflects the convergence of transformative technologies that will define the next decade of digital infrastructure.
               </p>
               <p className="text-slate-body leading-relaxed">
-                Spanning 8 carefully curated technical tracks, IC6GST 2027 covers the full spectrum from foundational
+                Spanning 5 carefully curated technical tracks, IC6GST 2027 covers the full spectrum from foundational
                 AI and signal processing to 6G networks, cybersecurity, green computing, and ICT for society.
               </p>
               <div className="mt-8 flex flex-wrap gap-2">

@@ -52,44 +52,44 @@ export default function CountdownTimer({
   ];
 
   return (
-    <div className="text-center">
-      <p className={`text-sm font-semibold uppercase tracking-widest mb-4 ${
-        dark ? "text-teal-accent" : "text-teal-DEFAULT"
-      }`}>
+    <div className="text-center w-full max-w-full overflow-hidden">
+      <p
+        className={`text-xs sm:text-sm font-semibold uppercase tracking-widest mb-4 truncate ${
+          dark ? "text-teal-accent" : "text-teal-DEFAULT"
+        }`}
+      >
         {label}
       </p>
-      <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
-        {units.map((unit, idx) => (
-          <div key={unit.label} className="flex items-center gap-2 sm:gap-3 md:gap-4">
-            <div className="flex flex-col items-center">
-              <div
-                className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-xl flex items-center justify-center text-2xl sm:text-4xl font-black tabular-nums ${
-                  dark
-                    ? "bg-white/10 text-white border border-white/20"
-                    : "bg-navy text-teal-accent border border-teal-DEFAULT/30"
-                }`}
-              >
-                {mounted ? String(unit.value).padStart(2, "0") : "--"}
-              </div>
-              <span className={`mt-2 text-xs font-semibold uppercase tracking-wider ${
-                dark ? "text-gray-300" : "text-slate-light"
-              }`}>
-                {unit.label}
-              </span>
+
+      {/* Responsive 4-Column Grid — mathematically bounded */}
+      <div className="grid grid-cols-4 gap-2 sm:gap-3 w-full max-w-sm mx-auto px-1">
+        {units.map((unit) => (
+          <div key={unit.label} className="flex flex-col items-center">
+            <div
+              className={`w-full aspect-square max-w-[4.25rem] max-h-[4.25rem] rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl md:text-3xl font-black tabular-nums transition-all ${
+                dark
+                  ? "bg-white/10 text-white border border-white/20 shadow-inner"
+                  : "bg-navy text-teal-accent border border-teal-DEFAULT/30 shadow-md"
+              }`}
+            >
+              {mounted ? String(unit.value).padStart(2, "0") : "--"}
             </div>
-            {idx < units.length - 1 && (
-              <span className={`text-2xl sm:text-4xl font-bold mb-6 ${
-                dark ? "text-teal-accent" : "text-teal-DEFAULT"
-              }`}>
-                :
-              </span>
-            )}
+            <span
+              className={`mt-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider ${
+                dark ? "text-gray-300" : "text-slate-light"
+              }`}
+            >
+              {unit.label}
+            </span>
           </div>
         ))}
       </div>
-      <p className={`mt-4 text-xs ${
-        dark ? "text-gray-400" : "text-slate-light"
-      }`}>
+
+      <p
+        className={`mt-4 text-xs ${
+          dark ? "text-gray-400" : "text-slate-light"
+        }`}
+      >
         Deadline: May 31, 2027, 11:59 PM IST
       </p>
     </div>

@@ -23,7 +23,12 @@ export default function Footer() {
           <div className="flex items-center gap-3 mb-4">
             <Logo inverted className="h-10 w-auto" />
             <div>
-              <p className="font-extrabold text-lg text-white">IC6GST 2027</p>
+              <p className="font-black text-lg text-white">
+                <span className="font-ic text-cyan-400">IC</span>
+                <span className="font-6g text-teal-accent tracking-wider">6G</span>
+                <span className="font-st text-emerald-400">ST</span>
+                <span className="ml-1 text-white">2027</span>
+              </p>
               <p className="text-xs text-teal-accent">PDEU, Gandhinagar</p>
             </div>
           </div>

@@ -56,8 +56,11 @@ export default function Navbar() {
                 <Logo className="h-10 w-auto" />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-navy font-extrabold text-lg tracking-tight group-hover:text-teal-DEFAULT transition-colors">
-                  IC6GST 2027
+                <span className="text-navy font-black text-lg tracking-tight group-hover:opacity-90 transition-opacity">
+                  <span className="font-ic text-cyan-600">IC</span>
+                  <span className="font-6g text-teal-600 tracking-wider">6G</span>
+                  <span className="font-st text-emerald-600">ST</span>
+                  <span className="text-navy ml-1 font-sans font-extrabold">2027</span>
                 </span>
                 <span className="text-xs text-slate-light hidden sm:block">
                   PDEU, Gandhinagar

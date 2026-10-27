@@ -69,6 +69,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        ic: ["var(--font-ic)", "ui-sans-serif", "sans-serif"],
+        "6g": ["var(--font-6g)", "ui-sans-serif", "sans-serif"],
+        st: ["var(--font-st)", "ui-sans-serif", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
