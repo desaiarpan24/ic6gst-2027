@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 const newsItems = [
-  "📢 Call for papers is now open!! Submit your research to ICGST 2027",
+  "📢 Call for papers is now open!! Submit your research to IC6GST 2027",
   "🏆 Best paper Awards in all 5 tracks",
   "🎯 Full paper submission deadline: May 15, 2027",
   "📄 Accepted papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements",
