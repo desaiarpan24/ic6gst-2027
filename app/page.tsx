@@ -168,15 +168,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NEWS TICKER */}
-      <section className="bg-teal-DEFAULT py-3 overflow-hidden shadow-inner">
-        <div className="ticker-wrap">
-          <div className="ticker-inner">
-            {[...newsItems, ...newsItems].map((item, i) => (
-              <span key={i} className="text-white font-semibold text-sm mx-10">
-                {item}
-              </span>
-            ))}
+      {/* NEWS HEADLINES TICKER */}
+      <section className="bg-navy border-y border-teal-DEFAULT/30 py-2.5 overflow-hidden shadow-lg relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center gap-3 sm:gap-4">
+          {/* Breaking News Badge */}
+          <div className="flex-shrink-0 flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-navy-dark px-3.5 py-1 rounded-full font-black text-xs uppercase tracking-wider shadow-md">
+            <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
+            <span className="hidden sm:inline">Latest</span> Updates
+          </div>
+
+          {/* Scrolling News Headlines Marquee */}
+          <div className="news-ticker-wrap flex-1 overflow-hidden">
+            <div className="news-ticker-content flex items-center gap-8 text-sm sm:text-base">
+              {[...newsItems, ...newsItems].map((item, i) => (
+                <div key={i} className="flex items-center gap-8 flex-shrink-0">
+                  <span className="text-white font-medium hover:text-teal-accent transition-colors flex items-center gap-2">
+                    {item}
+                  </span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-accent/70 flex-shrink-0" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -43,13 +43,42 @@
   }
 }
 
-/* Marquee / ticker animation */
+/* Real continuous news headline marquee ticker */
+@keyframes newsMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.news-ticker-wrap {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.news-ticker-content {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: newsMarquee 32s linear infinite;
+}
+
+.news-ticker-wrap:hover .news-ticker-content {
+  animation-play-state: paused;
+}
+
 .ticker-wrap {
   @apply overflow-hidden whitespace-nowrap;
 }
 .ticker-inner {
-  display: inline-block;
-  animation: marquee 35s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: newsMarquee 32s linear infinite;
 }
 .ticker-inner:hover {
   animation-play-state: paused;
