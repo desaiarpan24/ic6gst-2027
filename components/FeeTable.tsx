@@ -7,63 +7,79 @@ interface FeeTableProps {
   applySurcharge?: boolean;
 }
 
-interface FeeItem {
+interface FeeScheduleItem {
   category: string;
-  subcategory: string;
-  inrBase: number;
-  usdBase: number;
-  highlight: boolean;
+  type: string;
+  earlyBirdINR: string;
+  earlyBirdUSD: string;
+  finalINR: string;
+  finalUSD: string;
+  isIEEEMember: boolean;
 }
 
-const feeData: FeeItem[] = [
+const feeSchedule: FeeScheduleItem[] = [
   {
     category: "Academia",
-    subcategory: "Non-IEEE Member",
-    inrBase: 8000,
-    usdBase: 84,
-    highlight: false,
+    type: "Non-IEEE member",
+    earlyBirdINR: "₹8,000",
+    earlyBirdUSD: "US$250",
+    finalINR: "₹8,800",
+    finalUSD: "US$275",
+    isIEEEMember: false,
   },
   {
     category: "Academia",
-    subcategory: "IEEE Member",
-    inrBase: 6700,
-    usdBase: 70,
-    highlight: true,
+    type: "IEEE member",
+    earlyBirdINR: "₹6,700",
+    earlyBirdUSD: "US$210",
+    finalINR: "₹7,370",
+    finalUSD: "US$230",
+    isIEEEMember: true,
   },
   {
     category: "Industry",
-    subcategory: "Non-IEEE Member",
-    inrBase: 10500,
-    usdBase: 110,
-    highlight: false,
+    type: "Non-IEEE member",
+    earlyBirdINR: "₹10,500",
+    earlyBirdUSD: "US$295",
+    finalINR: "₹11,550",
+    finalUSD: "US$325",
+    isIEEEMember: false,
   },
   {
     category: "Industry",
-    subcategory: "IEEE Member",
-    inrBase: 8800,
-    usdBase: 93,
-    highlight: true,
+    type: "IEEE member",
+    earlyBirdINR: "₹8,800",
+    earlyBirdUSD: "US$250",
+    finalINR: "₹9,680",
+    finalUSD: "US$275",
+    isIEEEMember: true,
   },
   {
     category: "Students",
-    subcategory: "Non-IEEE Member",
-    inrBase: 6300,
-    usdBase: 66,
-    highlight: false,
+    type: "Non-IEEE member",
+    earlyBirdINR: "₹6,300",
+    earlyBirdUSD: "US$170",
+    finalINR: "₹6,930",
+    finalUSD: "US$185",
+    isIEEEMember: false,
   },
   {
     category: "Students",
-    subcategory: "IEEE Member",
-    inrBase: 5300,
-    usdBase: 56,
-    highlight: true,
+    type: "IEEE member",
+    earlyBirdINR: "₹5,300",
+    earlyBirdUSD: "US$145",
+    finalINR: "₹5,830",
+    finalUSD: "US$160",
+    isIEEEMember: true,
   },
   {
     category: "Attendee",
-    subcategory: "Without Paper",
-    inrBase: 2500,
-    usdBase: 26,
-    highlight: false,
+    type: "Without paper",
+    earlyBirdINR: "₹2,500",
+    earlyBirdUSD: "US$85",
+    finalINR: "₹2,750",
+    finalUSD: "US$95",
+    isIEEEMember: false,
   },
 ];
 
@@ -71,86 +87,110 @@ export default function FeeTable({
   currency,
   applySurcharge = false,
 }: FeeTableProps) {
+  const isUSD = currency === "USD";
+
   return (
     <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm bg-white">
       <table className="w-full text-sm">
         <thead>
-          <tr className="bg-navy text-white">
-            <th className="text-left px-6 py-4 font-semibold">Category</th>
-            <th className="text-left px-6 py-4 font-semibold">Type</th>
-            <th className="text-right px-6 py-4 font-semibold">
-              Registration Fee ({currency === "INR" ? "INR ₹" : "USD $"})
-              {applySurcharge && (
-                <span className="ml-2 text-xs font-normal text-amber-300">
-                  (+10% Late Fee)
-                </span>
-              )}
+          <tr className="bg-navy text-white text-left">
+            <th className="px-6 py-4 font-semibold">Category</th>
+            <th className="px-6 py-4 font-semibold">Type</th>
+            <th
+              className={`px-6 py-4 font-semibold text-right transition-colors ${
+                !applySurcharge
+                  ? "bg-teal-DEFAULT/25 text-teal-accent border-b-2 border-teal-accent"
+                  : "text-gray-300"
+              }`}
+            >
+              <div className="flex items-center justify-end gap-1.5">
+                <span>Early bird ({isUSD ? "USD" : "INR"})</span>
+                {!applySurcharge && (
+                  <span className="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-teal-accent text-navy">
+                    Active
+                  </span>
+                )}
+              </div>
             </th>
-            <th className="text-center px-6 py-4 font-semibold">Status / Discount</th>
+            <th
+              className={`px-6 py-4 font-semibold text-right transition-colors ${
+                applySurcharge
+                  ? "bg-amber-500/25 text-amber-300 border-b-2 border-amber-400"
+                  : "text-gray-300"
+              }`}
+            >
+              <div className="flex items-center justify-end gap-1.5">
+                <span>Final +10% ({isUSD ? "USD" : "INR"})</span>
+                {applySurcharge && (
+                  <span className="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-amber-400 text-navy">
+                    Active
+                  </span>
+                )}
+              </div>
+            </th>
+            <th className="px-6 py-4 font-semibold text-center">Benefit</th>
           </tr>
         </thead>
-        <tbody>
-          {feeData.map((row, idx) => {
-            const inrFinal = applySurcharge
-              ? Math.round(row.inrBase * 1.1)
-              : row.inrBase;
-            const usdFinal = applySurcharge
-              ? Math.round(row.usdBase * 1.1)
-              : row.usdBase;
-
-            const baseFormatted =
-              currency === "INR"
-                ? `₹${row.inrBase.toLocaleString("en-IN")}`
-                : `$${row.usdBase}`;
-            const finalFormatted =
-              currency === "INR"
-                ? `₹${inrFinal.toLocaleString("en-IN")}`
-                : `$${usdFinal}`;
+        <tbody className="divide-y divide-gray-100">
+          {feeSchedule.map((row, idx) => {
+            const earlyPrice = isUSD ? row.earlyBirdUSD : row.earlyBirdINR;
+            const finalPrice = isUSD ? row.finalUSD : row.finalINR;
 
             return (
               <tr
                 key={idx}
-                className={`border-t border-gray-100 transition-colors hover:bg-teal-DEFAULT/5 ${
-                  idx % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                className={`transition-colors hover:bg-teal-DEFAULT/5 ${
+                  idx % 2 === 0 ? "bg-white" : "bg-gray-50/60"
                 }`}
               >
-                <td className="px-6 py-4">
-                  <span className="font-bold text-navy">{row.category}</span>
+                <td className="px-6 py-4 font-bold text-navy">{row.category}</td>
+                <td className="px-6 py-4 text-slate-light font-medium">
+                  {row.type}
                 </td>
-                <td className="px-6 py-4 text-slate-light">{row.subcategory}</td>
-                <td className="px-6 py-4 text-right">
-                  {applySurcharge ? (
-                    <div className="flex flex-col items-end">
-                      <span className="text-xs text-slate-400 line-through">
-                        {baseFormatted}
-                      </span>
-                      <span className="font-black text-lg text-amber-600">
-                        {finalFormatted}
-                      </span>
-                    </div>
-                  ) : (
-                    <span className="font-black text-lg text-teal-DEFAULT">
-                      {finalFormatted}
-                    </span>
-                  )}
+
+                {/* Early bird column */}
+                <td
+                  className={`px-6 py-4 text-right transition-colors ${
+                    !applySurcharge ? "bg-teal-DEFAULT/5" : ""
+                  }`}
+                >
+                  <span
+                    className={`font-black text-base ${
+                      !applySurcharge
+                        ? "text-teal-DEFAULT text-lg"
+                        : "text-slate-400 line-through text-sm"
+                    }`}
+                  >
+                    {earlyPrice}
+                  </span>
                 </td>
+
+                {/* Final +10% column */}
+                <td
+                  className={`px-6 py-4 text-right transition-colors ${
+                    applySurcharge ? "bg-amber-500/10" : ""
+                  }`}
+                >
+                  <span
+                    className={`font-black text-base ${
+                      applySurcharge
+                        ? "text-amber-600 text-lg"
+                        : "text-slate-600 font-semibold text-sm"
+                    }`}
+                  >
+                    {finalPrice}
+                  </span>
+                </td>
+
+                {/* Badge column */}
                 <td className="px-6 py-4 text-center">
-                  <div className="flex items-center justify-center gap-1.5 flex-wrap">
-                    {row.highlight && (
-                      <Badge variant="default" className="text-xs bg-teal-DEFAULT">
-                        IEEE Rate
-                      </Badge>
-                    )}
-                    {applySurcharge ? (
-                      <Badge className="bg-amber-100 text-amber-800 border-amber-300 text-xs">
-                        +10% Regular
-                      </Badge>
-                    ) : (
-                      <Badge className="bg-emerald-100 text-emerald-800 border-emerald-300 text-xs">
-                        Early Bird
-                      </Badge>
-                    )}
-                  </div>
+                  {row.isIEEEMember ? (
+                    <Badge className="bg-teal-DEFAULT text-white text-xs">
+                      IEEE Member Rate
+                    </Badge>
+                  ) : (
+                    <span className="text-gray-300 text-xs">—</span>
+                  )}
                 </td>
               </tr>
             );
