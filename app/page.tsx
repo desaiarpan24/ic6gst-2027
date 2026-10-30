@@ -368,7 +368,7 @@ export default function HomePage() {
                   <div className="relative w-full overflow-hidden bg-navy-dark">
                     <img
                       src="/images/statue-of-unity.png"
-                      alt="Statue of Unity, Gujarat — Conference Venue Region"
+                      alt="Statue of Unity, Gujarat"
                       className="w-full h-auto max-h-[420px] object-cover object-top hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4">
@@ -378,13 +378,10 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="p-6 bg-white">
-                    <div className="flex items-center justify-between flex-wrap gap-2 mb-2">
+                    <div className="mb-2">
                       <h3 className="font-black text-navy text-xl sm:text-2xl">
                         Statue of Unity, Gujarat
                       </h3>
-                      <span className="px-3 py-1 rounded-full bg-teal-DEFAULT/10 text-teal-DEFAULT font-bold text-xs">
-                        Conference Venue Region
-                      </span>
                     </div>
                     <p className="text-slate-body text-sm leading-relaxed mb-4">
                       Standing at 182 meters as the world’s tallest statue, the Statue of Unity
