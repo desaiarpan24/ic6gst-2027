@@ -146,7 +146,7 @@ const tpcData: CommitteeRole[] = [
   {
     role: "TPC Chairs",
     members: [
-      { name: "Dr. Kamal Garg", affiliation: "Bharat 6G Alliance" },
+      { name: "Dr. Kamal Garg", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Jagannath Malik", affiliation: "IIT Patna" },
       { name: "Dr. Sameer S M", affiliation: "NIT Calicut" },
       { name: "Dr. Ashutosh Dutta", affiliation: "John Hopkins University, USA" },
