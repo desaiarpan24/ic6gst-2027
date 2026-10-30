@@ -134,9 +134,10 @@ const organizingData: CommitteeRole[] = [
     ],
   },
   {
-    role: "Local Arrangements and Registration Chair",
+    role: "Local Arrangements and Registration Chairs",
     members: [
       { name: "Dr. Prashant Dwivedi", affiliation: "PDEU, Gandhinagar" },
+      { name: "Dr. Kirtikant Sharma", affiliation: "PDEU, Gandhinagar" },
     ],
   },
 ];
@@ -148,7 +149,7 @@ const tpcData: CommitteeRole[] = [
       { name: "Dr. Kamal Garg", affiliation: "Bharat 6G Alliance" },
       { name: "Dr. Jagannath Malik", affiliation: "IIT Patna" },
       { name: "Dr. Sameer S M", affiliation: "NIT Calicut" },
-      { name: "Dr. Ashutosh Dutta", affiliation: "Johns Hopkins University, USA" },
+      { name: "Dr. Ashutosh Dutta", affiliation: "John Hopkins University, USA" },
       { name: "Dr. Mita Paunwala", affiliation: "IEEE Nominee" },
     ],
   },
