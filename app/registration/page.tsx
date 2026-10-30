@@ -273,6 +273,14 @@ export default function RegistrationPage() {
 
             {/* Dynamic Fee Table (with 10% surcharge calculation) */}
             <FeeTable currency={isUSD ? "USD" : "INR"} applySurcharge={isLate} />
+
+            {/* Mandatory Fee Note */}
+            <div className="mt-4 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-body text-sm flex items-start gap-3 shadow-xs">
+              <Info size={18} className="text-amber-700 mt-0.5 flex-shrink-0" />
+              <p className="text-amber-950 font-medium leading-relaxed">
+                Fees are exclusive of 18% GST. Authors from outside India pay in USD. At least one author per accepted paper must register by 31 July 2027.
+              </p>
+            </div>
           </AnimatedSection>
 
           {/* IEEE member note */}
