@@ -99,6 +99,7 @@ export default function RegistrationPage() {
                     "Final registration deadline with 10% extra fee is August 25, 2027.",
                     "At least one author per accepted paper must register at full author rate.",
                     "Authors can present at most 2 papers per registration.",
+                    "Students can present only 1 paper per registration.",
                     "Payment must be completed in full to confirm registration.",
                   ].map((note, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-slate-body">
@@ -158,7 +159,7 @@ export default function RegistrationPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Conference kit (badge, bag, stationery, proceedings USB)",
+                    "Conference kit (badge, bag, stationery)",
                     "Access to all technical sessions and keynote lectures",
                     "High tea and lunch on both conference days",
                     "Conference Gala Dinner (Oct 2, 2027)",
