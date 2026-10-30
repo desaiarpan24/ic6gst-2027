@@ -182,7 +182,7 @@ export default function CallForPapersPage() {
               },
               {
                 title: "Page Limit",
-                desc: "Up to 6 pages including figures and tables. Up to 2 additional pages permitted with an extra page charge.",
+                desc: "Up to 4-5 pages including figures and tables.",
                 emoji: "📄",
               },
               {
@@ -192,7 +192,7 @@ export default function CallForPapersPage() {
               },
               {
                 title: "Review Process",
-                desc: "Double-blind peer review. Ensure author names and affiliations are thoroughly removed from the submitted PDF.",
+                desc: "Single blind peer review.",
                 emoji: "🔍",
               },
               {
