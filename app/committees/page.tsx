@@ -150,7 +150,7 @@ const tpcData: CommitteeRole[] = [
       { name: "Dr. Jagannath Malik", affiliation: "IIT Patna" },
       { name: "Dr. Sameer S M", affiliation: "NIT Calicut" },
       { name: "Dr. Ashutosh Dutta", affiliation: "John Hopkins University, USA" },
-      { name: "Dr. Mita Paunwala", affiliation: "IEEE Nominee" },
+      { name: "Dr. Amit Ved", affiliation: "IEEE Nominee" },
     ],
   },
   {
