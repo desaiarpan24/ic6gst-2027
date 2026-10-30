@@ -49,7 +49,7 @@ export default function RegistrationPage() {
               <div className={`flex items-center gap-2 font-bold text-lg transition-colors ${
                 isUSD ? "text-teal-DEFAULT" : "text-slate-light"
               }`}>
-                <span className="text-2xl">🇳🇳</span>
+                <span className="text-2xl">🌐</span>
                 <span>Foreign (USD $)</span>
               </div>
             </div>
@@ -95,8 +95,8 @@ export default function RegistrationPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Early bird rates apply until August 10, 2027.",
-                    "A 10% surcharge applies for registrations after August 25, 2027.",
+                    "Early bird rates apply until July 31, 2027.",
+                    "Final registration deadline with 10% extra fee is August 25, 2027.",
                     "At least one author per accepted paper must register at full author rate.",
                     "Authors can present at most 2 papers per registration.",
                     "Payment must be completed in full to confirm registration.",

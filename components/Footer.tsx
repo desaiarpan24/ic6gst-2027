@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, ExternalLink } from "lucide-react";
 import Logo from "./Logo";
 
 const quickLinks = [
@@ -70,14 +70,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Mail size={16} className="text-teal-accent flex-shrink-0" />
-              <a href="mailto:ic6gst2027@pdpu.ac.in" className="text-gray-400 hover:text-teal-accent transition-colors">
-                ic6gst2027@pdpu.ac.in
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone size={16} className="text-teal-accent flex-shrink-0" />
-              <a href="tel:+919909980477" className="text-gray-400 hover:text-teal-accent transition-colors">
-                +91-9909980477
+              <a href="mailto:ic6gst@gmail.com" className="text-gray-400 hover:text-teal-accent transition-colors">
+                ic6gst@gmail.com
               </a>
             </li>
           </ul>

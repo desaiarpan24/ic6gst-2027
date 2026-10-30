@@ -29,7 +29,7 @@ interface CountdownTimerProps {
 }
 
 export default function CountdownTimer({
-  targetDate = new Date("2027-05-31T23:59:00+05:30"),
+  targetDate = new Date("2027-05-15T23:59:00+05:30"),
   label = "Full Paper Submission Deadline",
   dark = false,
 }: CountdownTimerProps) {
@@ -90,7 +90,7 @@ export default function CountdownTimer({
           dark ? "text-gray-400" : "text-slate-light"
         }`}
       >
-        Deadline: May 31, 2027, 11:59 PM IST
+        Deadline: May 15, 2027, 11:59 PM IST
       </p>
     </div>
   );

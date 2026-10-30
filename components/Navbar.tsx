@@ -37,7 +37,7 @@ export default function Navbar() {
       {/* Top info bar */}
       <div className="bg-navy-dark text-teal-accent text-xs py-1.5 px-4 text-center hidden md:block">
         <span className="mr-6">📅 October 2–3, 2027 | PDEU, Gandhinagar, Gujarat, India</span>
-        <span>📧 ic6gst2027@pdpu.ac.in</span>
+        <span>📧 ic6gst@gmail.com</span>
       </div>
 
       {/* Main navbar */}

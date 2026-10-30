@@ -2,44 +2,57 @@ import { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
-import { MapPin, Trees, Building2, Train, Plane } from "lucide-react";
+import { MapPin, Trees, Building2, Train, Plane, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Venue",
-  description: "IC6GST 2027 venue — PDEU campus in Gandhinagar, Gujarat, India. Nearby attractions and travel information.",
+  description:
+    "IC6GST 2027 venue — PDEU campus in Gandhinagar, Gujarat, India. Nearby attractions and travel information.",
 };
 
 const attractions = [
   {
-    name: "Akshardham Temple",
-    desc: "A stunning spiritual and cultural monument, one of the world's largest Hindu temples with intricate carved architecture and exhibitions.",
-    image: "https://images.unsplash.com/photo-1621496503614-c78e48c6d944?auto=format&fit=crop&w=600&q=80",
-    distance: "15 km from PDEU",
-  },
-  {
-    name: "ISKCON Temple",
-    desc: "A magnificent temple dedicated to Lord Krishna with serene gardens, spiritual programs, and beautiful architecture.",
-    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80",
-    distance: "12 km from PDEU",
-  },
-  {
-    name: "Gujarat Science City",
-    desc: "India's largest science centre with interactive exhibits, a planetarium, IMAX theatre, and a 4D motion theatre for science enthusiasts.",
-    image: "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&w=600&q=80",
+    name: "Science City",
+    desc: "India's premier science exploration complex featuring interactive science halls, a space dome planetarium, robotics gallery, IMAX 3D, and aquatic exhibitions.",
+    image: "/images/science-city.jpeg",
     distance: "25 km from PDEU",
   },
   {
-    name: "Sabarmati Ashram",
-    desc: "Gandhi's historic residence on the banks of the Sabarmati River — the spiritual cradle of India's independence movement.",
-    image: "https://images.unsplash.com/photo-1596493138222-2db2c67e68a3?auto=format&fit=crop&w=600&q=80",
-    distance: "30 km from PDEU",
+    name: "Akshardham Temple",
+    desc: "A breathtaking architectural and spiritual masterpiece in Gandhinagar carved from pink sandstone, surrounded by manicured gardens and musical water fountains.",
+    image: "/images/akshardham-temple.jpeg",
+    distance: "15 km from PDEU",
+  },
+  {
+    name: "Mahatma Mandir",
+    desc: "A landmark convention and exhibition centre in Gandhinagar celebrating Mahatma Gandhi's ethos, hosting major international congresses and diplomatic summits.",
+    image: "/images/mahatma-mandir.jpg",
+    distance: "10 km from PDEU",
+  },
+  {
+    name: "Indroda Nature Park",
+    desc: "Often hailed as India's Jurassic Park, featuring fossilized dinosaur hatcheries, botanical reserves, an open zoo, and indigenous bird sanctuaries along the Sabarmati.",
+    image: "/images/indroda-nature-park.jpeg",
+    distance: "8 km from PDEU",
   },
 ];
 
 const travelInfo = [
-  { icon: Plane, title: "By Air", desc: "Sardar Vallabhbhai Patel International Airport, Ahmedabad (AMD) — 35 km from PDEU. Well connected to major Indian and international cities." },
-  { icon: Train, title: "By Train", desc: "Gandhinagar Capital Railway Station (GDNR) is 8 km from PDEU. Ahmedabad Railway Station (ADI) is 28 km away with excellent connectivity." },
-  { icon: Building2, title: "Accommodation", desc: "Several hotels in Gandhinagar and Ahmedabad within 10–35 km. Recommended hotels list will be shared with registered participants." },
+  {
+    icon: Plane,
+    title: "By Air",
+    desc: "Sardar Vallabhbhai Patel International Airport (AMD) in Ahmedabad is approximately 20 km from PDEU, offering direct domestic and international flights.",
+  },
+  {
+    icon: Train,
+    title: "By Train",
+    desc: "Gandhinagar Capital Railway Station (GDNR) is 8 km away, and Ahmedabad Junction (ADI / Kalupur) is 25 km away, connecting to all major Indian metropolitan hubs.",
+  },
+  {
+    icon: Building2,
+    title: "Accommodation",
+    desc: "Numerous premium, business, and budget hotels are available across Gandhinagar, GIFT City, and Ahmedabad. Preferential conference rates will be shared with registered delegates.",
+  },
 ];
 
 export default function VenuePage() {
@@ -50,12 +63,17 @@ export default function VenuePage() {
         <div className="absolute inset-0 hero-grid opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <Badge variant="outline" className="border-teal-accent text-teal-accent mb-4">Location</Badge>
+            <Badge
+              variant="outline"
+              className="border-teal-accent text-teal-accent mb-4"
+            >
+              Conference Venue
+            </Badge>
             <h1 className="text-5xl sm:text-6xl font-black text-white mb-6">
               Venue &amp; <span className="gradient-text">City</span>
             </h1>
             <p className="text-gray-300 text-xl max-w-2xl mx-auto">
-              PDEU, Gandhinagar — the &ldquo;Tree City of India&rdquo; and administrative capital of Gujarat.
+              PDEU, Gandhinagar — Gujarat&apos;s administrative capital and one of the greenest cities in Asia.
             </p>
           </AnimatedSection>
         </div>
@@ -66,42 +84,50 @@ export default function VenuePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <AnimatedSection direction="left">
-              <span className="text-teal-DEFAULT font-semibold uppercase tracking-widest text-sm">Host City</span>
-              <h2 className="text-4xl font-black text-navy mt-3 mb-6">Gandhinagar, Gujarat</h2>
+              <span className="text-teal-DEFAULT font-semibold uppercase tracking-widest text-sm">
+                Host City
+              </span>
+              <h2 className="text-4xl font-black text-navy mt-3 mb-6">
+                Gandhinagar, Gujarat
+              </h2>
               <div className="section-divider mb-8" />
               <p className="text-slate-body leading-relaxed mb-5">
-                Gandhinagar is the capital city of Gujarat, India — a planned city located 23 km north of
-                Ahmedabad. Named after Mahatma Gandhi, it is one of the greenest cities in Asia, often
-                called the <strong className="text-navy">&ldquo;Tree City of India&rdquo;</strong> for its remarkable green cover.
+                Gandhinagar is the capital city of Gujarat, India — a meticulously planned
+                city located just 23 km north of Ahmedabad. Named in honour of Mahatma
+                Gandhi, it is renowned as one of the greenest capital cities in Asia, with
+                over 50% green cover.
               </p>
               <p className="text-slate-body leading-relaxed mb-5">
-                The city is home to India&apos;s premier institutions including IIT Gandhinagar, NIFT, GIFT City
-                (India&apos;s first operational smart city), and PDEU. Its proximity to Ahmedabad gives delegates
-                access to world-class hospitality, dining, and cultural experiences.
+                The city is a thriving knowledge and technology nexus, hosting premier
+                institutions including PDEU, IIT Gandhinagar, NFSU, and GIFT City
+                (Gujarat International Finance Tec-City). Its proximity to Ahmedabad provides
+                delegates with seamless transit, heritage architecture, and vibrant culture.
               </p>
               <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-3 text-slate-body text-sm">
+                <div className="flex items-center gap-3 text-slate-body text-sm font-medium">
                   <MapPin size={16} className="text-teal-DEFAULT flex-shrink-0" />
-                  23 km north of Ahmedabad, Gujarat, India
+                  Raisan, Gandhinagar, Gujarat — 382007, India
                 </div>
-                <div className="flex items-center gap-3 text-slate-body text-sm">
+                <div className="flex items-center gap-3 text-slate-body text-sm font-medium">
                   <Trees size={16} className="text-teal-DEFAULT flex-shrink-0" />
-                  60% green cover — among the greenest planned cities in India
+                  Tree Capital of Gujarat — pristine, sustainable, and peaceful
                 </div>
               </div>
             </AnimatedSection>
 
             <AnimatedSection direction="right">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
                 <img
-                  src="https://images.unsplash.com/photo-1596525737119-e0c46dfcf4e0?auto=format&fit=crop&w=800&q=80"
-                  alt="Gujarat landmark architecture"
-                  className="w-full h-96 object-cover"
+                  src="/images/pdeu-campus.jpeg"
+                  alt="PDEU Campus, Gandhinagar"
+                  className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
-                <div className="absolute bottom-6 left-6">
-                  <p className="text-white font-bold text-lg">Gujarat, India</p>
-                  <p className="text-gray-300 text-sm">Capital city of Gujarat</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/30 to-transparent" />
+                <div className="absolute bottom-6 left-6 text-white">
+                  <p className="font-black text-xl">PDEU Gandhinagar</p>
+                  <p className="text-teal-accent text-sm">
+                    NAAC A++ Accredited 100-Acre Campus
+                  </p>
                 </div>
               </div>
             </AnimatedSection>
@@ -109,16 +135,21 @@ export default function VenuePage() {
         </div>
       </section>
 
-      {/* PDEU Campus */}
-      <section className="py-20 bg-background">
+      {/* PDEU Campus & Map */}
+      <section className="py-20 bg-background border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="text-teal-DEFAULT font-semibold uppercase tracking-widest text-sm">Venue</span>
-              <h2 className="text-4xl font-black text-navy mt-3 mb-4">PDEU Campus</h2>
+              <span className="text-teal-DEFAULT font-semibold uppercase tracking-widest text-sm">
+                Campus Location
+              </span>
+              <h2 className="text-4xl font-black text-navy mt-3 mb-4">
+                PDEU Campus Map
+              </h2>
               <div className="section-divider mx-auto mb-6" />
               <p className="text-slate-light max-w-2xl mx-auto">
-                The conference will be held at the Department of ICT, PDEU&apos;s 100-acre green campus in Gandhinagar.
+                The conference sessions will be held at the Department of ICT within
+                Pandit Deendayal Energy University.
               </p>
             </div>
           </AnimatedSection>
@@ -139,46 +170,70 @@ export default function VenuePage() {
             </div>
             <div className="mt-4 flex items-center justify-center gap-2 text-slate-light text-sm">
               <MapPin size={16} className="text-teal-DEFAULT" />
-              Pandit Deendayal Energy University, Raisan, Gandhinagar — 382007, Gujarat, India
+              Pandit Deendayal Energy University, Knowledge Corridor, Raisan, Gandhinagar — 382007, Gujarat, India
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Attractions */}
+      {/* Attractions with Updated Images */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="text-teal-DEFAULT font-semibold uppercase tracking-widest text-sm">Explore</span>
-              <h2 className="text-4xl font-black text-navy mt-3 mb-4">Nearby Attractions</h2>
-              <div className="section-divider mx-auto" />
+              <span className="text-teal-DEFAULT font-semibold uppercase tracking-widest text-sm">
+                Explore Gujarat
+              </span>
+              <h2 className="text-4xl font-black text-navy mt-3 mb-4">
+                Nearby Attractions
+              </h2>
+              <div className="section-divider mx-auto mb-6" />
+              <div className="max-w-2xl mx-auto mb-8">
+                <p className="text-slate-light text-base mb-4">
+                  Discover Gandhinagar and Ahmedabad&apos;s celebrated cultural landmarks,
+                  temples, architectural wonders, and natural sanctuaries during your stay.
+                </p>
+                <a
+                  href="https://gujarattourism.com/central-zone/ahmedabad.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-teal-DEFAULT/10 hover:bg-teal-DEFAULT text-teal-DEFAULT hover:text-white font-semibold text-sm transition-all border border-teal-DEFAULT/30 shadow-xs"
+                >
+                  Explore More on Gujarat Tourism Official Portal <ExternalLink size={14} />
+                </a>
+              </div>
             </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {attractions.map((a, i) => (
               <AnimatedSection key={a.name} delay={i * 0.1}>
-                <Card className="overflow-hidden card-hover group h-full">
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={a.image}
-                      alt={a.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
-                    <div className="absolute bottom-3 left-3">
-                      <span className="px-2 py-1 bg-teal-DEFAULT text-white text-xs font-semibold rounded-full">
-                        {a.distance}
-                      </span>
+                <Card className="overflow-hidden card-hover group h-full flex flex-col justify-between border-gray-200">
+                  <div>
+                    <div className="relative h-52 overflow-hidden bg-navy-dark">
+                      <img
+                        src={a.image}
+                        alt={a.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+                      <div className="absolute bottom-3 left-3">
+                        <span className="px-2.5 py-1 bg-teal-DEFAULT text-white text-xs font-bold rounded-full shadow-md">
+                          {a.distance}
+                        </span>
+                      </div>
                     </div>
+                    <CardHeader className="pb-2 pt-4">
+                      <CardTitle className="text-xl text-navy font-bold">
+                        {a.name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-slate-light text-sm leading-relaxed">
+                        {a.desc}
+                      </p>
+                    </CardContent>
                   </div>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-lg">{a.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-slate-light text-sm leading-relaxed">{a.desc}</p>
-                  </CardContent>
                 </Card>
               </AnimatedSection>
             ))}
@@ -192,8 +247,12 @@ export default function VenuePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="text-teal-accent font-semibold uppercase tracking-widest text-sm">Getting Here</span>
-              <h2 className="text-4xl font-black text-white mt-3 mb-4">Travel Information</h2>
+              <span className="text-teal-accent font-semibold uppercase tracking-widest text-sm">
+                Transit &amp; Lodging
+              </span>
+              <h2 className="text-4xl font-black text-white mt-3 mb-4">
+                Travel Information
+              </h2>
               <div className="section-divider mx-auto" />
             </div>
           </AnimatedSection>
@@ -201,12 +260,16 @@ export default function VenuePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {travelInfo.map((info, i) => (
               <AnimatedSection key={info.title} delay={i * 0.1}>
-                <div className="p-8 rounded-2xl bg-white/10 border border-white/20 backdrop-blur hover:bg-white/15 transition-all">
+                <div className="p-8 rounded-2xl bg-white/10 border border-white/20 backdrop-blur hover:bg-white/15 transition-all h-full">
                   <div className="w-12 h-12 rounded-xl bg-teal-DEFAULT/30 flex items-center justify-center mb-5">
                     <info.icon size={24} className="text-teal-accent" />
                   </div>
-                  <h3 className="font-bold text-white text-xl mb-3">{info.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{info.desc}</p>
+                  <h3 className="font-bold text-white text-xl mb-3">
+                    {info.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {info.desc}
+                  </p>
                 </div>
               </AnimatedSection>
             ))}

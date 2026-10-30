@@ -25,12 +25,12 @@
 |---|---|---|
 | `/` | **Home** | Hero with 6G tech background, countdown timer, animated news ticker marquee, conference highlights, welcome message, and CTA banners. |
 | `/about` | **About** | Detailed conference theme, NAAC A++ PDEU institution overview, ICT department research areas, and Signature 6G events (Workshop & Bharat 6G Session). |
-| `/call-for-papers` | **Call for Papers** | Author submission guidelines, IEEE Xplore publication details, and an interactive Accordion covering all 8 Technical Tracks (TT1–TT8). |
-| `/key-dates` | **Key Dates** | Live countdown timer to full paper deadline (May 31, 2027) with an alternating vertical timeline of all milestones. |
+| `/call-for-papers` | **Call for Papers** | Author submission guidelines, IEEE Xplore publication details, and an interactive Accordion covering all 5 Technical Tracks (T1–T5). |
+| `/key-dates` | **Key Dates** | Live countdown timer to full paper deadline (May 15, 2027) with an alternating vertical timeline and conference deadlines table. |
 | `/registration` | **Registration** | Stateful interactive toggle between **Indian (INR ₹)** and **Foreign (USD $)** fees, responsive fee table, IEEE discount notes, inclusions, and policies. |
-| `/committees` | **Committees** | Organized Tabs for Leadership, Organizing Committee, TPC Chairs, Track Chairs (TT1–TT8), Advisory & Steering, and Support teams. |
-| `/venue` | **Venue** | Gandhinagar city profile, PDEU campus details, 4 attraction cards (Akshardham, ISKCON, Science City, Sabarmati Ashram) with imagery, travel guides (Air, Rail, Road), and Google Maps embed. |
-| `/contact` | **Contact** | Organizing Chair details (Dr. Arpan Desai), contact cards, interactive contact form with validation & success state, and Sponsorship tier breakdown. |
+| `/committees` | **Committees** | Organized Tabs for Leadership, Organizing Committee, TPC Chairs, Track Chairs (T1–T5), Advisory (National & International), and Support teams. |
+| `/venue` | **Venue** | Gandhinagar city profile, PDEU campus details, 4 attraction cards (Science City, Akshardham, Mahatma Mandir, Indroda Nature Park) with imagery, Gujarat Tourism link, travel guides, and Google Maps embed. |
+| `/contact` | **Contact** | Conference Secretariat details, updated official email (`ic6gst@gmail.com`), interactive contact form, and Sponsorship tier breakdown. |
 
 ---
 
