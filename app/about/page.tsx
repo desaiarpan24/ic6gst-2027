@@ -87,7 +87,7 @@ export default function AboutPage() {
 
             <div className="p-6 rounded-2xl bg-teal-DEFAULT/10 border border-teal-DEFAULT/20 text-slate-body">
               <p className="font-bold text-navy text-base mb-2">
-                IEEE Xplore Publication
+                IEEE Xplore® Publication Opportunity
               </p>
               <p className="text-sm leading-relaxed">
                 Accepted papers will be submitted for possible inclusion into IEEE Xplore
@@ -138,7 +138,7 @@ export default function AboutPage() {
                   Pandit Deendayal Energy University
                 </h3>
                 <p className="text-slate-body leading-relaxed mb-5">
-                  Established in 2007 by the Government of Gujarat, Pandit Deendayal Energy
+                  Established in 2007 under a Gujarat State Act, Pandit Deendayal Energy
                   University (PDEU, formerly PDPU) is a premier technical institution spread
                   across a picturesque 100-acre lush green campus in Gandhinagar, the planned
                   capital city of Gujarat.

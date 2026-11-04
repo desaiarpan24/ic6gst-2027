@@ -72,7 +72,7 @@ export default function CountdownTimer({
                   : "bg-navy text-teal-accent border border-teal-DEFAULT/30 shadow-md"
               }`}
             >
-              {mounted ? String(unit.value).padStart(2, "0") : "--"}
+              {String(unit.value).padStart(2, "0")}
             </div>
             <span
               className={`mt-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider ${

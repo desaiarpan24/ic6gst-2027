@@ -42,34 +42,7 @@ export default function ContactPage() {
       bg: "bg-purple-900/30",
       border: "border-purple-700/50",
       perks:
-        "Prime keynote presentation, prominent logo across all conference materials & backdrop, 10 complimentary registrations, prime exhibition booth.",
-    },
-    {
-      tier: "Gold Sponsor",
-      icon: Award,
-      color: "text-yellow-400",
-      bg: "bg-yellow-900/30",
-      border: "border-yellow-700/50",
-      perks:
-        "Prominent branding on conference kit and website, 6 complimentary registrations, dedicated exhibition booth space.",
-    },
-    {
-      tier: "Silver Sponsor",
-      icon: Star,
-      color: "text-gray-300",
-      bg: "bg-gray-800/50",
-      border: "border-gray-600/50",
-      perks:
-        "Logo in conference proceedings and website, 4 complimentary delegate registrations.",
-    },
-    {
-      tier: "Bronze Sponsor",
-      icon: Star,
-      color: "text-orange-400",
-      bg: "bg-orange-900/30",
-      border: "border-orange-700/50",
-      perks:
-        "Logo on official website and banner acknowledgments, 2 complimentary registrations.",
+        "₹2,00,000 — Prime keynote presentation, prominent logo across all conference materials & backdrop, 5 complimentary registrations, prime exhibition booth.",
     },
     {
       tier: "6G Session Partner",
@@ -78,7 +51,34 @@ export default function ContactPage() {
       bg: "bg-teal-900/30",
       border: "border-teal-700/50",
       perks:
-        "Exclusive co-hosting privileges for the 6G Bharat Industry Session, panel speaker invitation, executive networking.",
+        "₹1,50,000 — Exclusive co-hosting privileges for the 6G Bharat Industry Session, panel speaker invitation, 4 complimentary registrations, executive networking.",
+    },
+    {
+      tier: "Gold Sponsor",
+      icon: Award,
+      color: "text-yellow-400",
+      bg: "bg-yellow-900/30",
+      border: "border-yellow-700/50",
+      perks:
+        "₹1,00,000 — Prominent branding on conference kit and website, 3 complimentary registrations, dedicated exhibition booth space.",
+    },
+    {
+      tier: "Silver Sponsor",
+      icon: Star,
+      color: "text-gray-300",
+      bg: "bg-gray-800/50",
+      border: "border-gray-600/50",
+      perks:
+        "₹50,000 — Logo in conference proceedings and website, 2 complimentary delegate registrations.",
+    },
+    {
+      tier: "Bronze Sponsor",
+      icon: Star,
+      color: "text-orange-400",
+      bg: "bg-orange-900/30",
+      border: "border-orange-700/50",
+      perks:
+        "₹25,000 — Logo on official website and banner acknowledgments, 1 complimentary registration.",
     },
   ];
 
@@ -121,30 +121,30 @@ export default function ContactPage() {
                   <div className="w-14 h-14 rounded-2xl bg-teal-DEFAULT/15 flex items-center justify-center flex-shrink-0">
                     <Building2 size={26} className="text-teal-DEFAULT" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <Badge className="mb-3 text-xs bg-teal-DEFAULT text-white">
                       Conference Organizing Secretariat
                     </Badge>
                     <h3 className="font-black text-navy text-xl sm:text-2xl mb-1">
                       IC6GST 2027 Secretariat
                     </h3>
-                    <p className="text-slate-light text-sm mb-5 leading-relaxed">
+                    <p className="text-slate-light text-sm mb-4 leading-relaxed">
                       Department of Information and Communication Technology (ICT)<br />
                       School of Technology, Pandit Deendayal Energy University (PDEU)
                     </p>
 
                     <div className="space-y-4">
-                      {/* Updated Email */}
+                      {/* Institutional Email */}
                       <a
-                        href="mailto:ic6gst@gmail.com"
+                        href="mailto:ic6gst2027@pdpu.ac.in"
                         className="flex items-center gap-3 text-sm font-semibold text-slate-body hover:text-teal-DEFAULT transition-colors group"
                       >
                         <span className="w-10 h-10 rounded-xl bg-teal-DEFAULT/10 flex items-center justify-center group-hover:bg-teal-DEFAULT group-hover:text-white transition-all flex-shrink-0">
                           <Mail size={16} className="text-teal-DEFAULT group-hover:text-white" />
                         </span>
                         <div>
-                          <p className="text-xs text-slate-light font-normal">Official Email</p>
-                          <p className="text-teal-DEFAULT font-bold text-base">ic6gst@gmail.com</p>
+                          <p className="text-xs text-slate-light font-normal">Official Institutional Email</p>
+                          <p className="text-teal-DEFAULT font-bold text-base">ic6gst2027@pdpu.ac.in</p>
                         </div>
                       </a>
 
@@ -157,7 +157,34 @@ export default function ContactPage() {
                           <p className="text-xs text-slate-light">Conference Venue Address</p>
                           <p className="font-medium text-navy">
                             Pandit Deendayal Energy University, Knowledge Corridor,
-                            Raisan, Gandhinagar — 382007, Gujarat, India
+                            Raisan, Gandhinagar – 382 426, Gujarat, India
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Named Organizing Chairs */}
+                    <div className="mt-6 pt-6 border-t border-gray-100">
+                      <p className="text-xs font-bold uppercase tracking-wider text-teal-DEFAULT mb-3">
+                        Organizing Leadership
+                      </p>
+                      <div className="space-y-3 text-xs sm:text-sm text-slate-body">
+                        <div className="p-3 rounded-xl bg-white border border-gray-100 shadow-xs">
+                          <p className="font-bold text-navy">Dr. Arpan Desai — Organizing Chair</p>
+                          <p className="text-slate-light text-xs">
+                            Email: <a href="mailto:arpan.desai@sot.pdpu.ac.in" className="text-teal-DEFAULT hover:underline">arpan.desai@sot.pdpu.ac.in</a> | Phone: <a href="tel:+919909980477" className="text-teal-DEFAULT hover:underline">+91 99099 80477</a>
+                          </p>
+                        </div>
+                        <div className="p-3 rounded-xl bg-white border border-gray-100 shadow-xs">
+                          <p className="font-bold text-navy">Dr. Ganga Prasad Pandey — Organizing Chair</p>
+                          <p className="text-slate-light text-xs">
+                            Email: <a href="mailto:gangaprasad.pandey@sot.pdpu.ac.in" className="text-teal-DEFAULT hover:underline">gangaprasad.pandey@sot.pdpu.ac.in</a>
+                          </p>
+                        </div>
+                        <div className="p-3 rounded-xl bg-white border border-gray-100 shadow-xs">
+                          <p className="font-bold text-navy">Dr. Abhishek Kumar — Publication Chair</p>
+                          <p className="text-slate-light text-xs">
+                            Email: <a href="mailto:abhishek.kumar@sot.pdpu.ac.in" className="text-teal-DEFAULT hover:underline">abhishek.kumar@sot.pdpu.ac.in</a>
                           </p>
                         </div>
                       </div>
@@ -169,7 +196,7 @@ export default function ContactPage() {
               {/* Quick Links */}
               <div className="grid grid-cols-2 gap-4">
                 <a
-                  href="https://cmt3.research.microsoft.com"
+                  href="https://cmt3.research.microsoft.com/IC6GST2027"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-5 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
@@ -181,14 +208,14 @@ export default function ContactPage() {
                   <p className="text-xs text-slate-light mt-0.5">Submit Paper</p>
                 </a>
                 <a
-                  href="mailto:ic6gst@gmail.com?subject=IC6GST 2027 Query"
+                  href="mailto:ic6gst2027@pdpu.ac.in?subject=IC6GST 2027 Query"
                   className="p-5 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
                 >
                   <p className="text-3xl mb-2">✉️</p>
                   <p className="font-bold text-navy text-sm group-hover:text-teal-DEFAULT transition-colors">
                     Email Inquiry
                   </p>
-                  <p className="text-xs text-slate-light mt-0.5">ic6gst@gmail.com</p>
+                  <p className="text-xs text-slate-light mt-0.5">ic6gst2027@pdpu.ac.in</p>
                 </a>
               </div>
             </AnimatedSection>
@@ -351,7 +378,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <a
-                    href="mailto:ic6gst@gmail.com?subject=Sponsorship Inquiry - IC6GST 2027"
+                    href="mailto:ic6gst2027@pdpu.ac.in?subject=Sponsorship Inquiry - IC6GST 2027"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-accent hover:underline mt-2"
                   >
                     Inquire for Package <ExternalLink size={12} />
@@ -370,10 +397,10 @@ export default function ContactPage() {
                 Connect with our sponsorship chairs directly via email.
               </p>
               <a
-                href="mailto:ic6gst@gmail.com?subject=Custom Sponsorship Inquiry - IC6GST 2027"
+                href="mailto:ic6gst2027@pdpu.ac.in?subject=Custom Sponsorship Inquiry - IC6GST 2027"
                 className="inline-flex items-center gap-2 px-8 py-3.5 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-xl hover:-translate-y-0.5 text-sm"
               >
-                <Mail size={16} /> Contact for Sponsorship (ic6gst@gmail.com)
+                <Mail size={16} /> Contact for Sponsorship (ic6gst2027@pdpu.ac.in)
               </a>
             </div>
           </AnimatedSection>

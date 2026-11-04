@@ -182,23 +182,28 @@ export default function CallForPapersPage() {
               },
               {
                 title: "Page Limit",
-                desc: "Up to 4-5 pages including figures and tables.",
+                desc: "Papers must be written in English in the IEEE two-column conference format, with a maximum of 5 pages including figures, tables and references. Extra page charge: ₹1,000 / US$25 per page, maximum 2 extra pages.",
                 emoji: "📄",
               },
               {
                 title: "Template",
-                desc: "Submissions must adhere strictly to the standard IEEE Conference Proceedings double-column format.",
+                desc: "Submissions must adhere strictly to the standard IEEE Conference Proceedings double-column format. Official IEEE conference templates: https://www.ieee.org/conferences/publishing/templates.html",
                 emoji: "📐",
               },
               {
                 title: "Review Process",
-                desc: "Single blind peer review.",
+                desc: "All submissions will be peer reviewed by at least three reviewers from the Technical Program Committee. Papers are screened for plagiarism before review, and decisions are based on originality, technical quality, relevance to the conference and clarity of presentation.",
                 emoji: "🔍",
               },
               {
                 title: "Submission Portal",
-                desc: "Submit your manuscript electronically via Microsoft CMT conference management portal. Microsoft CMT was used for managing the peer-reviewing process for this conference.",
+                desc: "Submit your manuscript electronically via the Microsoft CMT conference management portal for IC6GST 2027.",
                 emoji: "💻",
+              },
+              {
+                title: "Camera-Ready Submission",
+                desc: "Camera-ready papers must be checked with IEEE PDF eXpress and submitted with the IEEE electronic copyright form (eCF) by 31 July 2027.",
+                emoji: "📑",
               },
               {
                 title: "Originality & Ethics",
@@ -226,9 +231,12 @@ export default function CallForPapersPage() {
                     IEEE Xplore® Publication Opportunity
                   </h3>
                   <Badge className="bg-teal-DEFAULT text-white text-xs">
-                    IEEE Technical Co-Sponsor
+                    Technically co-sponsored by IEEE Gujarat Section
                   </Badge>
                 </div>
+                <p className="text-teal-accent text-xs font-semibold mb-2">
+                  IEEE Gujarat Section is the technical co-sponsor of IC6GST 2027.
+                </p>
                 <p className="text-gray-200 leading-relaxed text-sm sm:text-base">
                   &ldquo;Accepted papers will be submitted for possible inclusion into IEEE
                   Xplore subject to meeting IEEE Xplore’s scope and quality requirements.&rdquo;
@@ -239,7 +247,7 @@ export default function CallForPapersPage() {
                 </div>
               </div>
               <a
-                href="https://cmt3.research.microsoft.com"
+                href="https://cmt3.research.microsoft.com/IC6GST2027"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg whitespace-nowrap"
@@ -263,7 +271,7 @@ export default function CallForPapersPage() {
                   </div>
                 </div>
                 <a
-                  href="https://cmt3.research.microsoft.com"
+                  href="https://cmt3.research.microsoft.com/IC6GST2027"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-2.5 bg-teal-DEFAULT hover:bg-teal-600 text-white font-bold rounded-full text-sm transition-colors whitespace-nowrap"
@@ -363,7 +371,7 @@ export default function CallForPapersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://cmt3.research.microsoft.com"
+              href="https://cmt3.research.microsoft.com/IC6GST2027"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-colors shadow-lg"

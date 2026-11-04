@@ -36,9 +36,12 @@ export default function Footer() {
             International Conference on Intelligent Computing, 6G-and-Beyond Communication
             and Sustainable Technologies. October 2–3, 2027.
           </p>
-          <div className="mt-4 flex gap-2">
-            <span className="px-2 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs">IEEE Sponsored</span>
-            <span className="px-2 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs">Peer Reviewed</span>
+          <div className="mt-4 flex flex-col gap-1.5">
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2.5 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs">Technically co-sponsored by IEEE Gujarat Section</span>
+              <span className="px-2.5 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs">Peer Reviewed</span>
+            </div>
+            <p className="text-xs text-gray-400">In association with IEEE Signal Processing Society, Gujarat Chapter</p>
           </div>
         </div>
 
@@ -66,12 +69,12 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3 text-gray-400">
               <MapPin size={16} className="text-teal-accent mt-0.5 flex-shrink-0" />
-              <span>Dept. of ICT, PDEU<br />Gandhinagar - 382007<br />Gujarat, India</span>
+              <span>Dept. of ICT, PDEU<br />Raisan, Gandhinagar – 382 426<br />Gujarat, India</span>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={16} className="text-teal-accent flex-shrink-0" />
-              <a href="mailto:ic6gst@gmail.com" className="text-gray-400 hover:text-teal-accent transition-colors">
-                ic6gst@gmail.com
+              <a href="mailto:ic6gst2027@pdpu.ac.in" className="text-gray-400 hover:text-teal-accent transition-colors">
+                ic6gst2027@pdpu.ac.in
               </a>
             </li>
           </ul>
@@ -89,7 +92,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-500">
-          <p>© 2027 IC6GST 2027 — PDEU, Gandhinagar. All rights reserved.</p>
+          <p>© 2026–2027 IC6GST 2027 — PDEU, Gandhinagar. All rights reserved.</p>
           <p>Organized by Department of ICT, Pandit Deendayal Energy University</p>
         </div>
       </div>

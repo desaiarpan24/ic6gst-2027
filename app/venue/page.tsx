@@ -106,7 +106,7 @@ export default function VenuePage() {
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-3 text-slate-body text-sm font-medium">
                   <MapPin size={16} className="text-teal-DEFAULT flex-shrink-0" />
-                  Raisan, Gandhinagar, Gujarat — 382007, India
+                  Raisan, Gandhinagar – 382 426, Gujarat, India
                 </div>
                 <div className="flex items-center gap-3 text-slate-body text-sm font-medium">
                   <Trees size={16} className="text-teal-DEFAULT flex-shrink-0" />
@@ -170,7 +170,7 @@ export default function VenuePage() {
             </div>
             <div className="mt-4 flex items-center justify-center gap-2 text-slate-light text-sm">
               <MapPin size={16} className="text-teal-DEFAULT" />
-              Pandit Deendayal Energy University, Knowledge Corridor, Raisan, Gandhinagar — 382007, Gujarat, India
+              Pandit Deendayal Energy University, Knowledge Corridor, Raisan, Gandhinagar – 382 426, Gujarat, India
             </div>
           </AnimatedSection>
         </div>

@@ -26,12 +26,17 @@ export default function RegistrationPage() {
         <div className="absolute inset-0 hero-grid opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <Badge
-              variant="outline"
-              className="border-teal-accent text-teal-accent mb-4"
-            >
-              Registrations Open
-            </Badge>
+            <div className="flex flex-col items-center gap-1.5 mb-4">
+              <Badge variant="outline" className="border-teal-accent text-teal-accent text-xs sm:text-sm">
+                Technically co-sponsored by IEEE Gujarat Section and IEEE SPS Gujarat Chapter
+              </Badge>
+              <p className="text-xs text-teal-accent/90 font-medium">
+                In association with IEEE Signal Processing Society, Gujarat Chapter
+              </p>
+              <span className="mt-1 px-3 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs font-semibold">
+                Registration opens with the acceptance notification on 30 June 2027.
+              </span>
+            </div>
             <h1 className="text-5xl sm:text-6xl font-black text-white mb-6">
               Registration <span className="gradient-text">Fees</span>
             </h1>
@@ -58,16 +63,14 @@ export default function RegistrationPage() {
                       Early Bird Registration
                     </span>
                     <span className="text-xs text-teal-accent font-semibold">
-                      10-Day Window
+                      Closes 31 July 2027
                     </span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-black text-white mb-1.5">
                     Early Bird Policy &amp; Fee Structure
                   </h3>
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Early bird registration is valid for <strong>10 days</strong> from the
-                    opening of registration. After 10 days, a <strong>10% extra fee surcharge</strong> applies
-                    across all registration categories as shown in the schedule below.
+                    Early bird registration closes on <strong>31 July 2027</strong>. Registrations from <strong>1 to 25 August 2027</strong> carry a 10% surcharge in all categories. At least one author of each accepted paper must register by 31 July 2027. Fees are exclusive of 18% GST; authors from outside India pay in USD.
                   </p>
                 </div>
               </div>
@@ -124,14 +127,22 @@ export default function RegistrationPage() {
 
           {/* IEEE member note */}
           <AnimatedSection delay={0.1}>
-            <div className="mt-6 p-5 rounded-xl bg-teal-DEFAULT/5 border border-teal-DEFAULT/20 flex items-start gap-3">
-              <Info size={20} className="text-teal-DEFAULT mt-0.5 flex-shrink-0" />
-              <p className="text-sm text-slate-body">
-                <strong className="text-teal-DEFAULT">IEEE Members</strong> receive a
-                discounted registration fee across all categories. Please ensure your
-                IEEE membership is valid at the time of registration. A valid IEEE
-                Membership Number is required during form submission.
-              </p>
+            <div className="mt-6 space-y-4">
+              <div className="p-5 rounded-xl bg-teal-DEFAULT/5 border border-teal-DEFAULT/20 flex items-start gap-3">
+                <Info size={20} className="text-teal-DEFAULT mt-0.5 flex-shrink-0" />
+                <div className="text-sm text-slate-body space-y-2">
+                  <p>
+                    <strong className="text-teal-DEFAULT">IEEE Members:</strong> Receive a discounted registration fee across all categories. A valid IEEE Membership Number is required at registration.
+                  </p>
+                  <p className="font-medium text-navy">
+                    <strong className="text-teal-DEFAULT">IEEE Gujarat Section Discount:</strong> IEEE Gujarat Section members receive an additional <strong>5% discount</strong> on the IEEE member rate. A valid IEEE membership number is required at registration.
+                  </p>
+                </div>
+              </div>
+              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-center justify-between flex-wrap gap-2">
+                <span><strong>Extra Pages:</strong> Extra page charge: ₹1,000 / US$25 per page, maximum 2 pages.</span>
+                <span><strong>Invoices:</strong> Official GST invoices are issued by PDEU Accounts.</span>
+              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -158,12 +169,15 @@ export default function RegistrationPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Early bird registration is valid for 10 days.",
-                    "After 10 days, a 10% extra fee surcharge applies on all categories.",
+                    "Early bird registration closes on 31 July 2027.",
+                    "From 1 to 25 August 2027, a 10% surcharge applies on all categories.",
                     "At least one author per accepted paper must register at full author rate.",
                     "Authors can present at most 2 papers per registration.",
                     "Students can present only 1 paper per registration.",
-                    "Payment must be completed in full to confirm registration.",
+                    "IEEE Gujarat Section members receive an additional 5% discount on the IEEE member rate.",
+                    "Extra page charge: ₹1,000 / US$25 per page, maximum 2 extra pages.",
+                    "Payment via online payment gateway and/or bank transfer to the official PDEU account (details from PDEU Accounts).",
+                    "Official GST invoices are issued by Pandit Deendayal Energy University (PDEU).",
                   ].map((note, i) => (
                     <li
                       key={i}

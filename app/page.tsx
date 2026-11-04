@@ -41,8 +41,8 @@ const highlights = [
   },
   {
     icon: Cpu,
-    title: "IEEE Xplore Inclusion",
-    desc: "Accepted papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements",
+    title: "IEEE Xplore® Publication Opportunity",
+    desc: "Accepted papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements.",
   },
   {
     icon: Globe,
@@ -335,6 +335,14 @@ export default function HomePage() {
                   the conference brings together global thought leaders at the frontiers
                   of technology.
                 </p>
+                <div className="mb-6 flex flex-wrap gap-2 text-xs">
+                  <span className="px-3 py-1.5 rounded-full bg-navy/5 text-navy font-semibold border border-navy/10">
+                    Technically co-sponsored by IEEE Gujarat Section
+                  </span>
+                  <span className="px-3 py-1.5 rounded-full bg-teal-DEFAULT/10 text-teal-DEFAULT font-semibold border border-teal-DEFAULT/20">
+                    In association with IEEE Signal Processing Society, Gujarat Chapter
+                  </span>
+                </div>
                 <div className="p-4 rounded-xl bg-teal-DEFAULT/10 border border-teal-DEFAULT/20 text-slate-body text-sm mb-8">
                   <p className="font-semibold text-navy mb-1">Publication Opportunity:</p>
                   <p>
@@ -384,7 +392,7 @@ export default function HomePage() {
                       </h3>
                     </div>
                     <p className="text-slate-body text-sm leading-relaxed mb-4">
-                      Standing at 182 meters as the world’s tallest statue, the Statue of Unity
+                      Statue of Unity, Ekta Nagar (Kevadia) – about 200 km from Gandhinagar, a day trip by road. Standing at 182 meters as the world’s tallest statue, the Statue of Unity
                       symbolizes national unity and engineering excellence in Gujarat. Attendees
                       of IC6GST 2027 are invited to explore the rich heritage and landmark
                       marvels of Gujarat alongside the academic sessions at PDEU.
@@ -392,7 +400,7 @@ export default function HomePage() {
                     <div className="flex items-center justify-between pt-3 border-t border-gray-100 text-xs text-slate-light">
                       <span className="flex items-center gap-1.5 font-medium">
                         <MapPin size={14} className="text-teal-DEFAULT" />
-                        Kevadia / Gandhinagar, Gujarat
+                        Ekta Nagar (Kevadia) – ~200 km from Gandhinagar
                       </span>
                       <Link
                         href="/venue"

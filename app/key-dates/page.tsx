@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const deadlineTable = [
   { event: "Full paper submission date", date: "May 15, 2027", highlight: true },
   { event: "Paper acceptance notification", date: "Jun 30, 2027", highlight: false },
-  { event: "Submission of camera-ready paper", date: "Jul 31, 2027", highlight: false },
+  { event: "Camera-ready submission (IEEE PDF eXpress + eCF)", date: "Jul 31, 2027", highlight: false },
   { event: "Early bird registration", date: "Jul 31, 2027", highlight: false },
   { event: "Final registration with 10% extra fee", date: "Aug 25, 2027", highlight: false },
   { event: "Conference Dates (Physical)", date: "October 2–3, 2027", highlight: true },
@@ -36,7 +36,7 @@ const timeline = [
   },
   {
     date: "July 31, 2027",
-    event: "Camera-Ready Paper & Early Bird Registration",
+    event: "Camera-ready submission (IEEE PDF eXpress + eCF) & Early Bird Registration",
     desc: "Submit final camera-ready manuscript. Early bird registration closes at regular fee.",
     status: "upcoming",
     icon: "🏆",
@@ -75,7 +75,7 @@ export default function KeyDatesPage() {
               Key <span className="gradient-text">Dates</span>
             </h1>
             <p className="text-gray-300 text-xl max-w-2xl mx-auto">
-              Mark your calendar. All deadlines are firm — plan your submission accordingly.
+              Mark your calendar. Any change to deadlines will be announced on this page.
             </p>
           </AnimatedSection>
         </div>
@@ -242,10 +242,7 @@ export default function KeyDatesPage() {
                     • All deadlines are at{" "}
                     <strong>11:59 PM Indian Standard Time (IST / UTC+5:30)</strong>
                   </li>
-                  <li>
-                    • Deadlines are <strong>firm</strong>. Extensions will not be
-                    granted under ordinary circumstances.
-                  </li>
+                  <li>• Any change to deadlines will be announced on this page.</li>
                   <li>
                     • Authors are encouraged to submit{" "}
                     <strong>well before the deadline</strong> to avoid last-minute
