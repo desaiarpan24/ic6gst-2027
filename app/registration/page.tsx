@@ -26,17 +26,12 @@ export default function RegistrationPage() {
         <div className="absolute inset-0 hero-grid opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <div className="flex flex-col items-center gap-1.5 mb-4">
-              <Badge variant="outline" className="border-teal-accent text-teal-accent text-xs sm:text-sm">
-                Technically co-sponsored by IEEE Gujarat Section and IEEE SPS Gujarat Chapter
-              </Badge>
-              <p className="text-xs text-teal-accent/90 font-medium">
-                In association with IEEE Signal Processing Society, Gujarat Chapter
-              </p>
-              <span className="mt-1 px-3 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs font-semibold">
-                Registration opens with the acceptance notification on 30 June 2027.
-              </span>
-            </div>
+            <Badge
+              variant="outline"
+              className="border-teal-accent text-teal-accent mb-4"
+            >
+              Technically co-sponsored by IEEE Gujarat Section
+            </Badge>
             <h1 className="text-5xl sm:text-6xl font-black text-white mb-6">
               Registration <span className="gradient-text">Fees</span>
             </h1>
@@ -140,7 +135,7 @@ export default function RegistrationPage() {
                 </div>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-center justify-between flex-wrap gap-2">
-                <span><strong>Extra Pages:</strong> Extra page charge: ₹1,000 / US$25 per page, maximum 2 pages.</span>
+                <span><strong>Page Limit:</strong> Maximum 5 pages in IEEE format (no extra pages allowed).</span>
                 <span><strong>Invoices:</strong> Official GST invoices are issued by PDEU Accounts.</span>
               </div>
             </div>
@@ -175,7 +170,7 @@ export default function RegistrationPage() {
                     "Authors can present at most 2 papers per registration.",
                     "Students can present only 1 paper per registration.",
                     "IEEE Gujarat Section members receive an additional 5% discount on the IEEE member rate.",
-                    "Extra page charge: ₹1,000 / US$25 per page, maximum 2 extra pages.",
+                    "Strictly maximum 5 pages per paper in IEEE format; no extra pages are allowed.",
                     "Payment via online payment gateway and/or bank transfer to the official PDEU account (details from PDEU Accounts).",
                     "Official GST invoices are issued by Pandit Deendayal Energy University (PDEU).",
                   ].map((note, i) => (

@@ -182,7 +182,7 @@ export default function CallForPapersPage() {
               },
               {
                 title: "Page Limit",
-                desc: "Papers must be written in English in the IEEE two-column conference format, with a maximum of 5 pages including figures, tables and references. Extra page charge: ₹1,000 / US$25 per page, maximum 2 extra pages.",
+                desc: "Papers must be written in English in the IEEE two-column conference format, with a maximum of 5 pages including figures, tables and references. No extra pages are allowed.",
                 emoji: "📄",
               },
               {
