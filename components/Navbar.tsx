@@ -84,7 +84,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/call-for-papers"
+                href="/call-for-papers#submit-paper"
                 className="ml-3 px-4 py-2 bg-teal-DEFAULT text-white text-sm font-semibold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg hover:shadow-teal-DEFAULT/30 hover:-translate-y-0.5"
               >
                 Submit Paper
@@ -121,7 +121,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/call-for-papers"
+                href="/call-for-papers#submit-paper"
                 className="mt-3 px-4 py-3 bg-teal-DEFAULT text-white text-sm font-semibold rounded-lg text-center hover:bg-teal-600 transition-colors"
               >
                 Submit Paper →
