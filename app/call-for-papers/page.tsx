@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -247,7 +247,7 @@ export default function CallForPapersPage() {
                 </div>
               </div>
               <a
-                href="https://cmt3.research.microsoft.com/IC6GST2027"
+                href="https://cmt3.research.microsoft.com/ICSixGST2027"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg whitespace-nowrap"
@@ -271,7 +271,7 @@ export default function CallForPapersPage() {
                   </div>
                 </div>
                 <a
-                  href="https://cmt3.research.microsoft.com/IC6GST2027"
+                  href="https://cmt3.research.microsoft.com/ICSixGST2027"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-2.5 bg-teal-DEFAULT hover:bg-teal-600 text-white font-bold rounded-full text-sm transition-colors whitespace-nowrap"
@@ -371,7 +371,7 @@ export default function CallForPapersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://cmt3.research.microsoft.com/IC6GST2027"
+              href="https://cmt3.research.microsoft.com/ICSixGST2027"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-colors shadow-lg"

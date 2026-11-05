@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+﻿import { redirect } from "next/navigation";
 
 export default function SubmitPaperRedirect() {
-  redirect("/call-for-papers#submit-paper");
+  redirect("https://cmt3.research.microsoft.com/ICSixGST2027");
 }
