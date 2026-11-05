@@ -41,7 +41,7 @@ export default function Footer() {
               <span className="px-2.5 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs">Technically co-sponsored by IEEE Gujarat Section</span>
               <span className="px-2.5 py-1 rounded-full bg-teal-DEFAULT/20 text-teal-accent text-xs">Peer Reviewed</span>
             </div>
-            <p className="text-xs text-gray-400">In association with IEEE Signal Processing Society, Gujarat Chapter</p>
+            <p className="text-xs text-gray-400">Technically co-sponsored by IEEE Gujarat Section and IEEE Signal Processing Society, Gujarat Chapter</p>
           </div>
         </div>
 

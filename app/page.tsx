@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 const newsItems = [
   "📢 Call for papers is now open!! Submit your research to IC6GST 2027",
+  "🤝 Technically Co-sponsored by IEEE Gujarat Section and IEEE Signal Processing Society, Gujarat Chapter",
   "🏆 Best paper Awards in all 5 tracks",
   "🎯 Full paper submission deadline: May 15, 2027",
   "📄 Accepted papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements",
@@ -54,6 +55,32 @@ const highlights = [
 export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
+      {/* NEWS HEADLINES TICKER - Above Date & Hero */}
+      <section className="bg-navy border-b border-teal-DEFAULT/30 py-2.5 overflow-hidden shadow-lg relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center gap-3 sm:gap-4">
+          {/* Breaking News Badge */}
+          <div className="flex-shrink-0 flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-navy-dark px-3.5 py-1 rounded-full font-black text-xs uppercase tracking-wider shadow-md">
+            <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
+            <span className="hidden sm:inline">Latest</span> Updates
+          </div>
+
+          {/* Scrolling News Headlines Marquee */}
+          <div className="news-ticker-wrap flex-1 overflow-hidden">
+            <div className="news-ticker-content flex items-center gap-8 text-sm sm:text-base">
+              {[...newsItems, ...newsItems].map((item, i) => (
+                <div key={i} className="flex items-center gap-8 flex-shrink-0">
+                  <span className="text-white font-medium hover:text-teal-accent transition-colors flex items-center gap-2">
+                    {item}
+                  </span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-accent/70 flex-shrink-0" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center bg-navy-dark overflow-hidden">
         {/* Background image */}
@@ -104,6 +131,22 @@ export default function HomePage() {
                 </span>
                 <span className="block gradient-text">2027</span>
               </h1>
+
+              {/* Full Conference Name */}
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white mb-4 leading-snug tracking-tight">
+                International Conference on Intelligent Computing, 6G-and-Beyond Communication and Sustainable Technologies
+              </h2>
+
+              {/* Technical Co-Sponsorship Highlight */}
+              <div className="inline-flex flex-wrap items-center gap-2 px-4 py-2.5 rounded-2xl bg-teal-500/15 border border-teal-400/40 text-xs sm:text-sm text-cyan-200 mb-6 backdrop-blur-md">
+                <span className="flex items-center gap-1.5 font-bold text-teal-accent">
+                  <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
+                  Technically Co-Sponsored by:
+                </span>
+                <span className="font-semibold text-white">
+                  IEEE Gujarat Section &amp; IEEE Signal Processing Society, Gujarat Chapter
+                </span>
+              </div>
 
               {/* Domain Breakdown Badges */}
               <div className="flex flex-wrap items-center gap-2 mb-6 text-xs sm:text-sm">
@@ -168,30 +211,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NEWS HEADLINES TICKER */}
-      <section className="bg-navy border-y border-teal-DEFAULT/30 py-2.5 overflow-hidden shadow-lg relative z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center gap-3 sm:gap-4">
-          {/* Breaking News Badge */}
-          <div className="flex-shrink-0 flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-navy-dark px-3.5 py-1 rounded-full font-black text-xs uppercase tracking-wider shadow-md">
-            <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
-            <span className="hidden sm:inline">Latest</span> Updates
-          </div>
-
-          {/* Scrolling News Headlines Marquee */}
-          <div className="news-ticker-wrap flex-1 overflow-hidden">
-            <div className="news-ticker-content flex items-center gap-8 text-sm sm:text-base">
-              {[...newsItems, ...newsItems].map((item, i) => (
-                <div key={i} className="flex items-center gap-8 flex-shrink-0">
-                  <span className="text-white font-medium hover:text-teal-accent transition-colors flex items-center gap-2">
-                    {item}
-                  </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal-accent/70 flex-shrink-0" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* KEY DATES TIMELINE SUMMARY */}
       <section className="py-14 bg-navy-dark border-t border-b border-teal-DEFAULT/20 overflow-hidden">
@@ -335,12 +355,9 @@ export default function HomePage() {
                   the conference brings together global thought leaders at the frontiers
                   of technology.
                 </p>
-                <div className="mb-6 flex flex-wrap gap-2 text-xs">
-                  <span className="px-3 py-1.5 rounded-full bg-navy/5 text-navy font-semibold border border-navy/10">
-                    Technically co-sponsored by IEEE Gujarat Section
-                  </span>
-                  <span className="px-3 py-1.5 rounded-full bg-teal-DEFAULT/10 text-teal-DEFAULT font-semibold border border-teal-DEFAULT/20">
-                    In association with IEEE Signal Processing Society, Gujarat Chapter
+                <div className="mb-6 flex flex-wrap gap-2 text-xs sm:text-sm">
+                  <span className="px-4 py-2 rounded-xl bg-teal-DEFAULT/10 text-navy font-bold border border-teal-DEFAULT/30 flex items-center gap-2">
+                    <span>🤝</span> Technically Co-Sponsored by IEEE Gujarat Section and IEEE Signal Processing Society, Gujarat Chapter
                   </span>
                 </div>
                 <div className="p-4 rounded-xl bg-teal-DEFAULT/10 border border-teal-DEFAULT/20 text-slate-body text-sm mb-8">

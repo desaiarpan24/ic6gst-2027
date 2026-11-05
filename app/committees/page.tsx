@@ -319,7 +319,7 @@ const supportData = [
   },
   {
     role: "Technical Co-sponsor",
-    organization: "IEEE Gujarat Section",
+    organization: "IEEE Gujarat Section and IEEE Signal Processing Society, Gujarat Chapter",
     note: "Official Technical Co-Sponsor",
   },
   {
