@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -120,20 +120,8 @@ export default function RegistrationPage() {
             </div>
           </AnimatedSection>
 
-          {/* IEEE member note */}
           <AnimatedSection delay={0.1}>
-            <div className="mt-6 space-y-4">
-              <div className="p-5 rounded-xl bg-teal-DEFAULT/5 border border-teal-DEFAULT/20 flex items-start gap-3">
-                <Info size={20} className="text-teal-DEFAULT mt-0.5 flex-shrink-0" />
-                <div className="text-sm text-slate-body space-y-2">
-                  <p>
-                    <strong className="text-teal-DEFAULT">IEEE Members:</strong> Receive a discounted registration fee across all categories. A valid IEEE Membership Number is required at registration.
-                  </p>
-                  <p className="font-medium text-navy">
-                    <strong className="text-teal-DEFAULT">IEEE Gujarat Section Discount:</strong> IEEE Gujarat Section members receive an additional <strong>5% discount</strong> on the IEEE member rate. A valid IEEE membership number is required at registration.
-                  </p>
-                </div>
-              </div>
+            <div className="mt-6">
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-center justify-between flex-wrap gap-2">
                 <span><strong>Page Limit:</strong> Maximum 5 pages in IEEE format (no extra pages allowed).</span>
                 <span><strong>Invoices:</strong> Official GST invoices are issued by PDEU Accounts.</span>
@@ -169,7 +157,6 @@ export default function RegistrationPage() {
                     "At least one author per accepted paper must register at full author rate.",
                     "Authors can present at most 2 papers per registration.",
                     "Students can present only 1 paper per registration.",
-                    "IEEE Gujarat Section members receive an additional 5% discount on the IEEE member rate.",
                     "Strictly maximum 5 pages per paper in IEEE format; no extra pages are allowed.",
                     "Payment via online payment gateway and/or bank transfer to the official PDEU account (details from PDEU Accounts).",
                     "Official GST invoices are issued by Pandit Deendayal Energy University (PDEU).",
