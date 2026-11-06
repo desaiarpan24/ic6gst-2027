@@ -10,6 +10,7 @@ import {
   Cpu,
   Globe,
   Award,
+  Mic,
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import CountdownTimer from "@/components/CountdownTimer";
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 
 const newsItems = [
   "📢 Call for papers is now open!! Submit your research to IC6GST 2027",
+  "🎙️ Keynote and plenary talks by leading experts from academia, industry and the Bharat 6G ecosystem",
   "🤝 Technically Co-sponsored by IEEE Gujarat Section and IEEE Signal Processing Society, Gujarat Chapter",
   "🏆 Best paper Awards in all 5 tracks",
   "🎯 Full paper submission deadline: May 15, 2027",
@@ -36,14 +38,19 @@ const highlights = [
     desc: "Covering AI & Signal Processing, 6G Wireless Systems, Cybersecurity & Cloud, VLSI & Hardware, and Sustainable ICT",
   },
   {
-    icon: Award,
-    title: "Best Paper Awards",
-    desc: "Prestigious Best Paper Awards across all 5 technical tracks recognizing outstanding research",
+    icon: Mic,
+    title: "Keynote & Plenary Talks",
+    desc: "Keynote and plenary talks by leading experts from academia, industry and the Bharat 6G ecosystem on AI, 6G networks and sustainable technologies.",
   },
   {
     icon: Cpu,
     title: "IEEE Xplore® Publication Opportunity",
     desc: "Accepted papers will be submitted for possible inclusion into IEEE Xplore subject to meeting IEEE Xplore’s scope and quality requirements.",
+  },
+  {
+    icon: Award,
+    title: "Best Paper Awards",
+    desc: "Prestigious Best Paper Awards across all 5 technical tracks recognizing outstanding research",
   },
   {
     icon: Globe,
@@ -309,10 +316,14 @@ export default function HomePage() {
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {highlights.map((h, i) => (
-              <AnimatedSection key={h.title} delay={i * 0.1}>
-                <div className="group p-8 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-xl hover:shadow-teal-DEFAULT/10 transition-all duration-300 hover:-translate-y-2 bg-white text-center h-full flex flex-col justify-start">
+              <AnimatedSection
+                key={h.title}
+                delay={i * 0.1}
+                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex"
+              >
+                <div className="group p-8 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-xl hover:shadow-teal-DEFAULT/10 transition-all duration-300 hover:-translate-y-2 bg-white text-center w-full flex flex-col justify-start">
                   <div className="w-14 h-14 rounded-xl bg-teal-DEFAULT/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-teal-DEFAULT group-hover:scale-110 transition-all">
                     <h.icon
                       size={26}

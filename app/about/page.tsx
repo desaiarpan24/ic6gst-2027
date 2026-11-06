@@ -82,7 +82,7 @@ export default function AboutPage() {
             <p className="text-slate-body leading-relaxed mb-8">
               Spanning 5 carefully structured technical tracks, IC6GST 2027 fosters
               interdisciplinary collaboration across foundational computing, advanced
-              wireless communications, hardware systems, and sustainable applications.
+              wireless communications, hardware systems, and sustainable applications, featuring keynote and plenary talks by leading experts from academia, industry and the Bharat 6G ecosystem on AI, 6G networks and sustainable technologies.
             </p>
 
             <div className="p-6 rounded-2xl bg-teal-DEFAULT/10 border border-teal-DEFAULT/20 text-slate-body">

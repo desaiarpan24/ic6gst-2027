@@ -88,10 +88,9 @@ const organizingData: CommitteeRole[] = [
     ],
   },
   {
-    role: "6G Workshop and Industry Session Chairs",
+    role: "6G Workshop and Industry Session Chair",
     members: [
       { name: "Dr. Manish Mandloi", affiliation: "PDEU, Gandhinagar" },
-      { name: "Dr. V Vikas", affiliation: "PDEU, Gandhinagar" },
     ],
   },
   {
@@ -148,7 +147,7 @@ const tpcData: CommitteeRole[] = [
     members: [
       { name: "Dr. Kamal Garg", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Jagannath Malik", affiliation: "IIT Patna" },
-      { name: "Dr. Sameer S M", affiliation: "NIT Calicut" },
+      { name: "Prof. Jignesh Sarvaiya", affiliation: "SVNIT, Surat" },
       { name: "Dr. Ashutosh Dutta", affiliation: "John Hopkins University, USA" },
       { name: "Dr. Amit Ved", affiliation: "IEEE Nominee" },
     ],
@@ -264,6 +263,10 @@ const advisoryData: CommitteeRole[] = [
       {
         name: "Dr. A. Chockalingam",
         affiliation: "Professor, IISc Bangalore",
+      },
+      {
+        name: "Dr. S. M. Sameer",
+        affiliation: "NIT Calicut",
       },
     ],
   },
