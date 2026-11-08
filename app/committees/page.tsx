@@ -146,6 +146,7 @@ const tpcData: CommitteeRole[] = [
     role: "TPC Chairs",
     members: [
       { name: "Dr. Kamal Garg", affiliation: "PDEU, Gandhinagar" },
+      { name: "Dr. Kaibalya Panda", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Jagannath Malik", affiliation: "IIT Patna" },
       { name: "Prof. Jignesh Sarvaiya", affiliation: "SVNIT, Surat" },
       { name: "Dr. Hiren Mewada", affiliation: "Prince Mohammad Bin Fahd University, Saudi Arabia" },
