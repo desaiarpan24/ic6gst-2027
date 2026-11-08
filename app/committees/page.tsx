@@ -295,7 +295,7 @@ const advisoryData: CommitteeRole[] = [
       },
       {
         name: "Prof. Hsi Tsheng Chou",
-        affiliation: "National Taipei University, Taiwan",
+        affiliation: "National Taiwan University, Taiwan",
       },
       {
         name: "Prof. Emil Björnson",
