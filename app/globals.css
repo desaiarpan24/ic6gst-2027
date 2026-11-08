@@ -65,7 +65,7 @@
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: newsMarquee 32s linear infinite;
+  animation: newsMarquee 65s linear infinite;
 }
 
 .news-ticker-wrap:hover .news-ticker-content {
@@ -78,7 +78,7 @@
 .ticker-inner {
   display: flex;
   width: max-content;
-  animation: newsMarquee 32s linear infinite;
+  animation: newsMarquee 65s linear infinite;
 }
 .ticker-inner:hover {
   animation-play-state: paused;
