@@ -241,9 +241,9 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "Director General, Bharat 6G Alliance",
       },
       {
-        name: "Prof. Jamil Akhtar",
+        name: "Dr. Jamil Akhtar",
         affiliation:
-          "Ex-Director, Chief Scientist, & Professor - AcSIR from CEERI, Pilani",
+          "Visiting Professor, NIT Meghalaya; Chief Scientist (retd.), CSIR-CEERI, Pilani",
       },
       {
         name: "Sh. Alok Kumar Singhal",
@@ -258,16 +258,17 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "IIT Madras; Chairman, Bharat 6G Alliance",
       },
       {
-        name: "Prof. Amit Bhatt",
-        affiliation: "DG, Nirma University",
+        name: "Dr. Amit Bhatt",
+        affiliation: "Director General, Nirma University",
       },
       {
         name: "Dr. A. Chockalingam",
         affiliation: "Professor, IISc Bangalore",
       },
       {
-        name: "Dr. S. M. Sameer",
-        affiliation: "NIT Calicut",
+        name: "Dr. Sameer S. M.",
+        affiliation:
+          "2027-28 Director, IEEE Region-10 and Professor; Department of Electronics and Communication Engineering, National Institute of Technology Calicut, Kerala, India",
       },
     ],
   },
