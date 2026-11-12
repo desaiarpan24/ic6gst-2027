@@ -230,86 +230,60 @@ const tpcData: CommitteeRole[] = [
 
 const advisoryData: CommitteeRole[] = [
   {
-    role: "National Advisory Committee",
+    role: "National Advisory Committee*",
     members: [
       {
-        name: "Dr. Kumar Sivarajan",
-        affiliation: "Tejas Networks; Vice Chairman, Bharat 6G Alliance",
-      },
-      {
-        name: "Shri Rajesh Kumar Pathak",
-        affiliation: "Director General, Bharat 6G Alliance",
-      },
-      {
-        name: "Dr. Jamil Akhtar",
-        affiliation:
-          "Visiting Professor, NIT Meghalaya; Chief Scientist (retd.), CSIR-CEERI, Pilani",
+        name: "Prof. Jamil Akhtar",
+        affiliation: "Ex-Director, CSIR-CEERI Pilani",
       },
       {
         name: "Sh. Alok Kumar Singhal",
-        affiliation: "Scientist-SG, SAC-ISRO, Ahmedabad",
+        affiliation: "SAC-ISRO, Ahmedabad",
       },
       {
-        name: "Prof. Rajat Moona",
-        affiliation: "Director, IIT Gandhinagar",
+        name: "Dr. Sameer S M",
+        affiliation: "NIT Calicut",
       },
       {
-        name: "Prof. R. David Koilpillai",
-        affiliation: "IIT Madras; Chairman, Bharat 6G Alliance",
+        name: "Prof. Amit Bhatt",
+        affiliation: "DG, Nirma University",
       },
       {
-        name: "Dr. Amit Bhatt",
-        affiliation: "Director General, Nirma University",
+        name: "Prof. A. Chockalingam",
+        affiliation: "IISc Bangalore",
       },
       {
-        name: "Dr. A. Chockalingam",
-        affiliation: "Professor, IISc Bangalore",
-      },
-      {
-        name: "Dr. Sameer S. M.",
-        affiliation:
-          "2027-28 Director, IEEE Region-10 and Professor; Department of Electronics and Communication Engineering, National Institute of Technology Calicut, Kerala, India",
+        name: "Prof. K V S Hari",
+        affiliation: "IISc Bangalore",
       },
     ],
   },
   {
-    role: "International Advisory Committee",
+    role: "International Advisory Committee*",
     members: [
       {
-        name: "Prof. Matti Latva-aho",
-        affiliation: "6G Flagship, University of Oulu, Finland",
+        name: "Prof. Heng-Tung Hsu",
+        affiliation: "NYCU, Taiwan",
       },
       {
-        name: "Prof. Mehdi Bennis",
-        affiliation: "University of Oulu, Finland",
+        name: "Prof. Hsi-Tseng Chou",
+        affiliation: "National Taiwan Univ., Taiwan",
       },
       {
         name: "Prof. Akshya Kumar Swain",
-        affiliation: "University of Auckland, New Zealand",
+        affiliation: "Univ. of Auckland, New Zealand",
       },
       {
-        name: "Prof. R. T. Naayagi",
-        affiliation: "Newcastle University in Singapore",
+        name: "Prof. Premananda Rajatheva",
+        affiliation: "Univ. of Oulu, Finland",
       },
       {
-        name: "Prof. Heng Tung Hsu",
-        affiliation: "National Yang Ming Chiao Tung University, Taiwan",
+        name: "Dr. Truong Khang Nguyen",
+        affiliation: "Van Lang University, Vietnam",
       },
       {
-        name: "Prof. Hsi Tsheng Chou",
-        affiliation: "National Taiwan University, Taiwan",
-      },
-      {
-        name: "Prof. Emil Björnson",
-        affiliation: "KTH Royal Institute of Technology, Sweden",
-      },
-      {
-        name: "Prof. Erik G. Larsson",
-        affiliation: "Linköping University, Sweden",
-      },
-      {
-        name: "Dr. Paul Whatmough",
-        affiliation: "Qualcomm",
+        name: "Dr. Merih Palandoken",
+        affiliation: "Izmir Katip Celibi University, Turkey",
       },
     ],
   },
@@ -481,6 +455,9 @@ export default function CommitteesPage() {
                       members={roleGroup.members}
                     />
                   ))}
+                </div>
+                <div className="mt-6 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-500 italic text-center">
+                  *Final list will be updated based on the written consent of the experts.
                 </div>
               </TabsContent>
 

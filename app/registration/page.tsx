@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -101,10 +101,10 @@ export default function RegistrationPage() {
 
             <div className="flex justify-between items-center mb-4 px-1">
               <Badge className="text-sm px-4 py-1.5">
-                Showing fees in: {isUSD ? "USD ($)" : "INR (₹)"}
+                Active Selection: {isUSD ? "Foreign (USD $)" : "Indian (INR ₹)"}
               </Badge>
               <span className="text-xs text-slate-light font-medium hidden sm:inline">
-                Both Early Bird &amp; Final (+10%) schedules listed below
+                Both Indian &amp; Foreign rates shown in table
               </span>
             </div>
 

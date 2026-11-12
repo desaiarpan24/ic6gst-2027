@@ -3,148 +3,140 @@
 import { Badge } from "@/components/ui/badge";
 
 interface FeeTableProps {
-  currency: "INR" | "USD";
+  currency?: "INR" | "USD";
 }
 
-interface FeeScheduleItem {
+interface FeeItem {
   category: string;
-  type: string;
-  earlyBirdINR: string;
-  earlyBirdUSD: string;
-  finalINR: string;
-  finalUSD: string;
+  inr: string;
+  usd: string;
   isIEEEMember: boolean;
 }
 
-const feeSchedule: FeeScheduleItem[] = [
+const feeSchedule: FeeItem[] = [
   {
-    category: "Academia",
-    type: "Non-IEEE member",
-    earlyBirdINR: "₹8,000",
-    earlyBirdUSD: "US$250",
-    finalINR: "₹8,800",
-    finalUSD: "US$275",
+    category: "Academia (Non-IEEE Members)",
+    inr: "INR 8,000",
+    usd: "USD 93",
     isIEEEMember: false,
   },
   {
-    category: "Academia",
-    type: "IEEE member",
-    earlyBirdINR: "₹6,700",
-    earlyBirdUSD: "US$210",
-    finalINR: "₹7,370",
-    finalUSD: "US$230",
+    category: "Academia (IEEE Members)",
+    inr: "INR 6,700",
+    usd: "USD 78",
     isIEEEMember: true,
   },
   {
-    category: "Industry",
-    type: "Non-IEEE member",
-    earlyBirdINR: "₹10,500",
-    earlyBirdUSD: "US$295",
-    finalINR: "₹11,550",
-    finalUSD: "US$325",
+    category: "Industry (Non-IEEE Members)",
+    inr: "INR 10,500",
+    usd: "USD 122",
     isIEEEMember: false,
   },
   {
-    category: "Industry",
-    type: "IEEE member",
-    earlyBirdINR: "₹8,800",
-    earlyBirdUSD: "US$250",
-    finalINR: "₹9,680",
-    finalUSD: "US$275",
+    category: "Industry (IEEE Members)",
+    inr: "INR 8,800",
+    usd: "USD 103",
     isIEEEMember: true,
   },
   {
-    category: "Students",
-    type: "Non-IEEE member",
-    earlyBirdINR: "₹6,300",
-    earlyBirdUSD: "US$170",
-    finalINR: "₹6,930",
-    finalUSD: "US$185",
+    category: "Students (Non-IEEE Members)",
+    inr: "INR 6,300",
+    usd: "USD 74",
     isIEEEMember: false,
   },
   {
-    category: "Students",
-    type: "IEEE member",
-    earlyBirdINR: "₹5,300",
-    earlyBirdUSD: "US$145",
-    finalINR: "₹5,830",
-    finalUSD: "US$160",
+    category: "Students (IEEE Members)",
+    inr: "INR 5,300",
+    usd: "USD 62",
     isIEEEMember: true,
   },
   {
-    category: "Attendee",
-    type: "Without paper",
-    earlyBirdINR: "₹2,500",
-    earlyBirdUSD: "US$85",
-    finalINR: "₹2,750",
-    finalUSD: "US$95",
+    category: "Attendees without a paper",
+    inr: "INR 2,500",
+    usd: "USD 30",
     isIEEEMember: false,
   },
 ];
 
-export default function FeeTable({ currency }: FeeTableProps) {
+export default function FeeTable({ currency = "INR" }: FeeTableProps) {
   const isUSD = currency === "USD";
 
   return (
-    <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm bg-white">
-      <table className="w-full text-sm">
+    <div className="overflow-x-auto rounded-2xl border border-blue-200/80 shadow-md bg-white">
+      <table className="w-full text-sm sm:text-base border-collapse">
         <thead>
-          <tr className="bg-navy text-white text-left">
-            <th className="px-6 py-4 font-semibold">Category</th>
-            <th className="px-6 py-4 font-semibold">Type</th>
-            <th className="px-6 py-4 font-semibold text-right text-teal-accent">
-              Early bird ({isUSD ? "USD" : "INR"})
+          <tr className="bg-[#2b64a4] text-white">
+            <th className="px-6 py-4 font-bold text-left text-sm sm:text-base tracking-wide border-r border-blue-400/40">
+              Author Category
             </th>
-            <th className="px-6 py-4 font-semibold text-right text-gray-200">
-              Final +10% ({isUSD ? "USD" : "INR"})
+            <th
+              className={`px-6 py-4 font-bold text-center text-sm sm:text-base tracking-wide border-r border-blue-400/40 transition-colors ${
+                !isUSD ? "bg-[#1f4e85]" : ""
+              }`}
+            >
+              <div className="flex items-center justify-center gap-2">
+                <span>Indian</span>
+                {!isUSD && (
+                  <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-teal-accent text-navy">
+                    Active
+                  </span>
+                )}
+              </div>
             </th>
-            <th className="px-6 py-4 font-semibold text-center">Benefit</th>
+            <th
+              className={`px-6 py-4 font-bold text-center text-sm sm:text-base tracking-wide transition-colors ${
+                isUSD ? "bg-[#1f4e85]" : ""
+              }`}
+            >
+              <div className="flex items-center justify-center gap-2">
+                <span>Foreign</span>
+                {isUSD && (
+                  <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-teal-accent text-navy">
+                    Active
+                  </span>
+                )}
+              </div>
+            </th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-100">
-          {feeSchedule.map((row, idx) => {
-            const earlyPrice = isUSD ? row.earlyBirdUSD : row.earlyBirdINR;
-            const finalPrice = isUSD ? row.finalUSD : row.finalINR;
-
-            return (
-              <tr
-                key={idx}
-                className={`transition-colors hover:bg-teal-DEFAULT/5 ${
-                  idx % 2 === 0 ? "bg-white" : "bg-gray-50/60"
+        <tbody className="divide-y divide-blue-100">
+          {feeSchedule.map((row, idx) => (
+            <tr
+              key={idx}
+              className={`transition-colors hover:bg-blue-50/60 ${
+                idx % 2 === 0 ? "bg-white" : "bg-[#f2f7fc]"
+              }`}
+            >
+              <td className="px-6 py-4 font-bold text-navy border-r border-gray-200">
+                <div className="flex items-center justify-between gap-3">
+                  <span>{row.category}</span>
+                  {row.isIEEEMember && (
+                    <Badge className="bg-teal-DEFAULT/15 text-teal-DEFAULT border border-teal-DEFAULT/30 text-[11px] font-semibold flex-shrink-0">
+                      IEEE Member
+                    </Badge>
+                  )}
+                </div>
+              </td>
+              <td
+                className={`px-6 py-4 text-center font-bold border-r border-gray-200 transition-colors ${
+                  !isUSD
+                    ? "bg-teal-DEFAULT/10 text-navy font-black text-base sm:text-lg"
+                    : "text-slate-800"
                 }`}
               >
-                <td className="px-6 py-4 font-bold text-navy">{row.category}</td>
-                <td className="px-6 py-4 text-slate-light font-medium">
-                  {row.type}
-                </td>
-
-                {/* Early bird column */}
-                <td className="px-6 py-4 text-right">
-                  <span className="font-black text-base text-teal-DEFAULT">
-                    {earlyPrice}
-                  </span>
-                </td>
-
-                {/* Final +10% column */}
-                <td className="px-6 py-4 text-right">
-                  <span className="font-bold text-base text-navy">
-                    {finalPrice}
-                  </span>
-                </td>
-
-                {/* Badge column */}
-                <td className="px-6 py-4 text-center">
-                  {row.isIEEEMember ? (
-                    <Badge className="bg-teal-DEFAULT text-white text-xs">
-                      IEEE Member Rate
-                    </Badge>
-                  ) : (
-                    <span className="text-gray-300 text-xs">—</span>
-                  )}
-                </td>
-              </tr>
-            );
-          })}
+                {row.inr}
+              </td>
+              <td
+                className={`px-6 py-4 text-center font-bold transition-colors ${
+                  isUSD
+                    ? "bg-teal-DEFAULT/10 text-navy font-black text-base sm:text-lg"
+                    : "text-slate-800"
+                }`}
+              >
+                {row.usd}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
