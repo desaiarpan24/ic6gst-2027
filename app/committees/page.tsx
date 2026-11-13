@@ -263,6 +263,10 @@ const advisoryData: CommitteeRole[] = [
         name: "Dr. Usha Mehta",
         affiliation: "Nirma University",
       },
+      {
+        name: "Dr. Kiran Amin",
+        affiliation: "Deputy Pro Vice Chancellor, Ganpat University",
+      },
     ],
   },
   {
