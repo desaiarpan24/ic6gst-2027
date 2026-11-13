@@ -232,6 +232,10 @@ const advisoryData: CommitteeRole[] = [
     role: "National Advisory Committee*",
     members: [
       {
+        name: "Prof. Uday Desai",
+        affiliation: "Emeritus Professor, IIT Hyderabad",
+      },
+      {
         name: "Prof. Jamil Akhtar",
         affiliation: "Ex-Director, CSIR-CEERI Pilani",
       },
