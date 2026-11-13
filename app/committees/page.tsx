@@ -148,7 +148,6 @@ const tpcData: CommitteeRole[] = [
       { name: "Dr. Kamal Garg", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Kaibalya Panda", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Jagannath Malik", affiliation: "IIT Patna" },
-      { name: "Prof. Jignesh Sarvaiya", affiliation: "SVNIT, Surat" },
       { name: "Dr. Hiren Mewada", affiliation: "Prince Mohammad Bin Fahd University, Saudi Arabia" },
       { name: "Dr. Amit Ved", affiliation: "IEEE Nominee" },
     ],
@@ -253,8 +252,16 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "IISc Bangalore",
       },
       {
-        name: "Prof. K V S Hari",
+        name: "Dr. K V S Hari",
         affiliation: "IISc Bangalore",
+      },
+      {
+        name: "Mr. Nilesh Ranpura",
+        affiliation: "Einfochips",
+      },
+      {
+        name: "Dr. Usha Mehta",
+        affiliation: "Nirma University",
       },
     ],
   },
@@ -278,12 +285,12 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "Univ. of Oulu, Finland",
       },
       {
-        name: "Dr. Truong Khang Nguyen",
+        name: "Dr. Nguyen Truong Khang",
         affiliation: "Van Lang University, Vietnam",
       },
       {
         name: "Dr. Merih Palandoken",
-        affiliation: "Izmir Katip Celibi University, Turkey",
+        affiliation: "Izmir Katip Celebi University, Turkey",
       },
     ],
   },
