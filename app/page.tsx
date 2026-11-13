@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -192,7 +192,7 @@ export default function HomePage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://app.confconnects.com"
+                  href="https://cmt3.research.microsoft.com/ICSixGST2027"
                   id="cta-submit-paper"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-2xl hover:shadow-teal-DEFAULT/40 hover:-translate-y-1 text-base sm:text-lg"
                 >

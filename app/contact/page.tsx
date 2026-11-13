@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -196,14 +196,14 @@ export default function ContactPage() {
               {/* Quick Links */}
               <div className="grid grid-cols-2 gap-4">
                 <a
-                  href="https://app.confconnects.com"
+                  href="https://cmt3.research.microsoft.com/ICSixGST2027"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-5 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
                 >
                   <p className="text-3xl mb-2">💻</p>
                   <p className="font-bold text-navy text-sm group-hover:text-teal-DEFAULT transition-colors">
-                    Confconnects Portal
+                    CMT Portal
                   </p>
                   <p className="text-xs text-slate-light mt-0.5">Submit Paper</p>
                 </a>
