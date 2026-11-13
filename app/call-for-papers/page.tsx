@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -197,7 +197,7 @@ export default function CallForPapersPage() {
               },
               {
                 title: "Submission Portal",
-                desc: "Submit your manuscript electronically via the Microsoft CMT conference management portal for IC6GST 2027.",
+                desc: "Submit your manuscript electronically via the Confconnects conference management portal for IC6GST 2027.",
                 emoji: "💻",
               },
               {
@@ -247,41 +247,41 @@ export default function CallForPapersPage() {
                 </div>
               </div>
               <a
-                href="https://cmt3.research.microsoft.com/ICSixGST2027"
+                href="https://app.confconnects.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg whitespace-nowrap"
               >
-                Submit via CMT →
+                Submit via Confconnects →
               </a>
             </div>
           </AnimatedSection>
 
-          {/* Microsoft CMT Submission & Acknowledgment Banner */}
+          {/* Confconnects Submission Banner */}
           <AnimatedSection delay={0.1}>
             <div id="submit-paper" className="mt-8 p-6 sm:p-8 rounded-3xl bg-slate-900 text-white border border-teal-DEFAULT/30 shadow-lg">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-white/10">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-teal-DEFAULT/20 border border-teal-DEFAULT/40 flex items-center justify-center text-teal-accent font-black text-sm">
-                    CMT
+                    CC
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-white">Paper Submission via Microsoft CMT</h3>
-                    <p className="text-xs text-teal-accent">Conference Management Toolkit</p>
+                    <h3 className="font-bold text-lg text-white">Paper Submission via Confconnects</h3>
+                    <p className="text-xs text-teal-accent">Conference Management Platform</p>
                   </div>
                 </div>
                 <a
-                  href="https://cmt3.research.microsoft.com/ICSixGST2027"
+                  href="https://app.confconnects.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-2.5 bg-teal-DEFAULT hover:bg-teal-600 text-white font-bold rounded-full text-sm transition-colors whitespace-nowrap"
                 >
-                  Submit Paper via CMT →
+                  Submit Paper via Confconnects →
                 </a>
               </div>
               <p className="text-sm leading-relaxed text-gray-300">
-                <strong className="text-teal-accent">CMT Acknowledgment: </strong>
-                The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+                <strong className="text-teal-accent">Submission Platform: </strong>
+                All paper submissions, peer reviews, and camera-ready uploads for IC6GST 2027 are processed electronically via the Confconnects platform. Authors can submit manuscripts, track peer review status, and manage camera-ready versions directly through the portal.
               </p>
             </div>
           </AnimatedSection>
@@ -371,12 +371,12 @@ export default function CallForPapersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://cmt3.research.microsoft.com/ICSixGST2027"
+              href="https://app.confconnects.com"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-colors shadow-lg"
             >
-              Submit Paper via CMT
+              Submit Paper via Confconnects
             </a>
             <Link
               href="/key-dates"
@@ -386,7 +386,7 @@ export default function CallForPapersPage() {
             </Link>
           </div>
           <p className="mt-8 text-xs text-teal-100/90 max-w-2xl mx-auto leading-relaxed">
-            The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+            Paper submissions and peer-review processes for IC6GST 2027 are managed through the Confconnects platform.
           </p>
         </div>
       </section>
