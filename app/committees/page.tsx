@@ -271,6 +271,10 @@ const advisoryData: CommitteeRole[] = [
         name: "Dr. Kiran Amin",
         affiliation: "Deputy Pro Vice Chancellor, Ganpat University",
       },
+      {
+        name: "Prof. Manoj Singh Gaur",
+        affiliation: "Director, IIT Jammu",
+      },
     ],
   },
   {
