@@ -23,12 +23,14 @@ export default function Footer() {
           <div className="flex items-center gap-3 mb-4">
             <Logo inverted className="h-10 w-auto" />
             <div>
-              <p className="font-black text-lg text-white">
-                <span className="font-ic text-cyan-400">IC</span>
-                <span className="font-6g text-teal-accent tracking-wider">6G</span>
-                <span className="font-st text-emerald-400">ST</span>
-                <span className="ml-1 text-white">2027</span>
-              </p>
+              <div className="flex items-center gap-1.5">
+                <span className="px-2 py-0.5 rounded-md bg-[#0F172A] border border-slate-700/60 font-black text-base tracking-tight shadow-xs inline-flex items-center gap-0.5">
+                  <span className="font-ic text-[#FF9933]">IC</span>
+                  <span className="font-6g text-white tracking-wider">6G</span>
+                  <span className="font-st text-[#22c55e]">ST</span>
+                </span>
+                <span className="text-white font-sans font-black text-lg">2027</span>
+              </div>
               <p className="text-xs text-teal-accent">PDEU, Gandhinagar</p>
             </div>
           </div>

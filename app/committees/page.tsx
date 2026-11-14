@@ -143,6 +143,7 @@ const tpcData: CommitteeRole[] = [
       { name: "Dr. Kaibalya Panda", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Jagannath Malik", affiliation: "IIT Patna" },
       { name: "Dr. Hiren Mewada", affiliation: "Prince Mohammad Bin Fahd University, Saudi Arabia" },
+      { name: "Dr. Rajesh K. Ahir", affiliation: "Research Fellow, Nanyang Technical University (NTU), Singapore" },
       { name: "Dr. Amit Ved", affiliation: "IEEE Nominee" },
     ],
   },
@@ -252,6 +253,10 @@ const advisoryData: CommitteeRole[] = [
       {
         name: "Prof. Vineet Vashista",
         affiliation: "Associate Professor, Indian Institute of Technology Gandhinagar",
+      },
+      {
+        name: "Dr. Dhaval Patel",
+        affiliation: "Associate Professor, Ahmedabad University",
       },
     ],
   },
