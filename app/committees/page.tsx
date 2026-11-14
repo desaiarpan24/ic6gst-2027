@@ -112,9 +112,10 @@ const organizingData: CommitteeRole[] = [
     ],
   },
   {
-    role: "Awards Chair",
+    role: "Award Chairs",
     members: [
       { name: "Dr. Gaurav Bhargava", affiliation: "PDEU, Gandhinagar" },
+      { name: "Dr. Shivangi Mehta", affiliation: "PDEU, Gandhinagar" },
     ],
   },
   {
@@ -122,14 +123,7 @@ const organizingData: CommitteeRole[] = [
     members: [
       { name: "Dr. Deepak Sahu", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Bablu Singh", affiliation: "PDEU, Gandhinagar" },
-      {
-        name: "Mr. Ankit Dave",
-        affiliation: "IEEE Gujarat Section / Young Professionals",
-      },
-      {
-        name: "Mr. Giriraj Shah",
-        affiliation: "IEEE Gujarat Section / Young Professionals",
-      },
+      { name: "Dr. Aarti Solanki", affiliation: "PDEU, Gandhinagar" },
     ],
   },
   {
