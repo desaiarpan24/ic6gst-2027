@@ -244,7 +244,7 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "SAC-ISRO, Ahmedabad",
       },
       {
-        name: "Dr. Sameer S M",
+        name: "Prof. Sameer S M",
         affiliation: "Professor, Dept. of Electronics & Communication Engineering, National Institute of Technology Calicut",
       },
       {
@@ -256,7 +256,7 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "Professor, Dept. of Electrical Communication Engineering, IISc Bangalore",
       },
       {
-        name: "Dr. K V S Hari",
+        name: "Prof. K V S Hari",
         affiliation: "Director, Centre for Brain Research, IISc Bangalore",
       },
       {
@@ -264,11 +264,11 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "Associate VP - ASIC, Einfochips",
       },
       {
-        name: "Dr. Usha Mehta",
+        name: "Prof. Usha Mehta",
         affiliation: "Professor, Dept. of Electronics & Communication Engineering, Nirma University",
       },
       {
-        name: "Dr. Kiran Amin",
+        name: "Prof. Kiran Amin",
         affiliation: "Deputy Pro Vice Chancellor, Ganpat University",
       },
       {
