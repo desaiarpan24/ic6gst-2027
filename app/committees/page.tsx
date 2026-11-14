@@ -158,10 +158,6 @@ const tpcData: CommitteeRole[] = [
     members: [
       { name: "Dr. Rashmi Bhattad", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Surya Prakash Agnihotri", affiliation: "IIT Indore" },
-      {
-        name: "Prof. Deepu Rajan",
-        affiliation: "Nanyang Technological University (NTU), Singapore",
-      },
     ],
   },
   {
@@ -169,10 +165,6 @@ const tpcData: CommitteeRole[] = [
     members: [
       { name: "Dr. Pradip Barik", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Deborsi Basu", affiliation: "Ericsson Research, India" },
-      {
-        name: "Prof. Karu Esselle",
-        affiliation: "University of Technology Sydney, Australia",
-      },
     ],
   },
   {
@@ -183,10 +175,6 @@ const tpcData: CommitteeRole[] = [
         name: "Dr. Keshav Kaushik",
         affiliation:
           "Center for Cyber Security and Cryptology, Sharda University, Greater Noida",
-      },
-      {
-        name: "Prof. Rajkumar Buyya",
-        affiliation: "University of Melbourne, Australia",
       },
     ],
   },
@@ -199,10 +187,6 @@ const tpcData: CommitteeRole[] = [
         affiliation:
           "Head & Assistant Professor, Department of ECE, IIIT Nagpur",
       },
-      {
-        name: "Prof. Saraju P. Mohanty",
-        affiliation: "University of North Texas, USA",
-      },
     ],
   },
   {
@@ -212,10 +196,6 @@ const tpcData: CommitteeRole[] = [
       {
         name: "Dr. Manish Kumar",
         affiliation: "Associate Professor, DAU Gandhinagar",
-      },
-      {
-        name: "Prof. Akshay Kumar Rathore",
-        affiliation: "National University of Singapore (NUS)",
       },
     ],
   },
