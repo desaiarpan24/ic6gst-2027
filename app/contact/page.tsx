@@ -12,6 +12,7 @@ import {
   Handshake,
   Building2,
   ExternalLink,
+  Info,
 } from "lucide-react";
 
 export default function ContactPage() {
@@ -24,14 +25,22 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitted(true);
-    setLoading(false);
-    setForm({ name: "", email: "", subject: "", message: "" });
+    const emailSubject = encodeURIComponent(
+      `[IC6GST 2027 Query] ${form.subject || "Conference Inquiry"}`
+    );
+    const emailBody = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    );
+    // Send email to ic6gst@gmail.com
+    window.location.href = `mailto:ic6gst@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    setTimeout(() => {
+      setSubmitted(true);
+      setLoading(false);
+      setForm({ name: "", email: "", subject: "", message: "" });
+    }, 600);
   };
 
   const sponsorTiers = [
@@ -134,17 +143,17 @@ export default function ContactPage() {
                     </p>
 
                     <div className="space-y-4">
-                      {/* Institutional Email */}
+                      {/* Official Inquiry Email */}
                       <a
-                        href="mailto:ic6gst2027@pdpu.ac.in"
+                        href="mailto:ic6gst@gmail.com"
                         className="flex items-center gap-3 text-sm font-semibold text-slate-body hover:text-teal-DEFAULT transition-colors group"
                       >
                         <span className="w-10 h-10 rounded-xl bg-teal-DEFAULT/10 flex items-center justify-center group-hover:bg-teal-DEFAULT group-hover:text-white transition-all flex-shrink-0">
                           <Mail size={16} className="text-teal-DEFAULT group-hover:text-white" />
                         </span>
                         <div>
-                          <p className="text-xs text-slate-light font-normal">Official Institutional Email</p>
-                          <p className="text-teal-DEFAULT font-bold text-base">ic6gst2027@pdpu.ac.in</p>
+                          <p className="text-xs text-slate-light font-normal">Official Inquiry Email</p>
+                          <p className="text-teal-DEFAULT font-bold text-base">ic6gst@gmail.com</p>
                         </div>
                       </a>
 
@@ -160,6 +169,14 @@ export default function ContactPage() {
                             Raisan, Gandhinagar – 382 426, Gujarat, India
                           </p>
                         </div>
+                      </div>
+
+                      {/* Spam Folder Notice */}
+                      <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-950 flex items-start gap-2.5">
+                        <Info size={16} className="text-amber-700 mt-0.5 flex-shrink-0" />
+                        <p className="leading-relaxed">
+                          <strong>Note:</strong> Please make sure to check your <strong>spam / junk folder</strong> for email replies from the organizing committee (<code>ic6gst@gmail.com</code>).
+                        </p>
                       </div>
                     </div>
 
@@ -182,14 +199,14 @@ export default function ContactPage() {
                   <p className="text-xs text-slate-light mt-0.5">Submit Paper</p>
                 </a>
                 <a
-                  href="mailto:ic6gst2027@pdpu.ac.in?subject=IC6GST 2027 Query"
+                  href="mailto:ic6gst@gmail.com?subject=IC6GST 2027 Query"
                   className="p-5 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
                 >
                   <p className="text-3xl mb-2">✉️</p>
                   <p className="font-bold text-navy text-sm group-hover:text-teal-DEFAULT transition-colors">
                     Email Inquiry
                   </p>
-                  <p className="text-xs text-slate-light mt-0.5">ic6gst2027@pdpu.ac.in</p>
+                  <p className="text-xs text-slate-light mt-0.5">ic6gst@gmail.com</p>
                 </a>
               </div>
             </AnimatedSection>
@@ -204,9 +221,15 @@ export default function ContactPage() {
                   <h3 className="font-bold text-navy text-2xl mb-3">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-slate-body max-w-md leading-relaxed mb-6">
-                    Thank you for reaching out to IC6GST 2027. The organizing team will respond to your inquiry at the earliest.
+                  <p className="text-slate-body max-w-md leading-relaxed mb-4">
+                    Thank you for reaching out to IC6GST 2027. Your message has been routed to <strong>ic6gst@gmail.com</strong>. The organizing committee will respond to your inquiry at the earliest.
                   </p>
+                  <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-950 text-xs sm:text-sm leading-relaxed mb-6 max-w-md text-left flex items-start gap-2.5">
+                    <Info size={18} className="text-amber-700 mt-0.5 flex-shrink-0" />
+                    <span>
+                      <strong>Important:</strong> Please make sure to check your <strong>spam / junk folder</strong> for email replies from the organizing committee.
+                    </span>
+                  </div>
                   <button
                     onClick={() => setSubmitted(false)}
                     className="px-6 py-2.5 bg-teal-DEFAULT text-white font-semibold rounded-full hover:bg-teal-600 transition-colors shadow-sm"
@@ -310,6 +333,10 @@ export default function ContactPage() {
                       </>
                     )}
                   </button>
+                  <p className="text-xs text-slate-500 text-center leading-relaxed flex items-center justify-center gap-1.5 pt-1">
+                    <Info size={14} className="text-amber-600 flex-shrink-0" />
+                    <span>Please check your <strong>spam / junk folder</strong> for email replies from the organizing committee.</span>
+                  </p>
                 </form>
               )}
             </AnimatedSection>
@@ -352,7 +379,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <a
-                    href="mailto:ic6gst2027@pdpu.ac.in?subject=Sponsorship Inquiry - IC6GST 2027"
+                    href="mailto:ic6gst@gmail.com?subject=Sponsorship Inquiry - IC6GST 2027"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-accent hover:underline mt-2"
                   >
                     Inquire for Package <ExternalLink size={12} />
@@ -371,10 +398,10 @@ export default function ContactPage() {
                 Connect with our sponsorship chairs directly via email.
               </p>
               <a
-                href="mailto:ic6gst2027@pdpu.ac.in?subject=Custom Sponsorship Inquiry - IC6GST 2027"
+                href="mailto:ic6gst@gmail.com?subject=Custom Sponsorship Inquiry - IC6GST 2027"
                 className="inline-flex items-center gap-2 px-8 py-3.5 bg-teal-DEFAULT text-white font-bold rounded-full hover:bg-teal-600 transition-all hover:shadow-xl hover:-translate-y-0.5 text-sm"
               >
-                <Mail size={16} /> Contact for Sponsorship (ic6gst2027@pdpu.ac.in)
+                <Mail size={16} /> Contact for Sponsorship (ic6gst@gmail.com)
               </a>
             </div>
           </AnimatedSection>
