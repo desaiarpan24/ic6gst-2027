@@ -65,7 +65,7 @@ export default function RegistrationPage() {
                     Early Bird Policy &amp; Fee Structure
                   </h3>
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Early bird registration closes on <strong>31 July 2027</strong>. Registrations from <strong>1 to 25 August 2027</strong> carry a 10% surcharge in all categories. At least one author of each accepted paper must register by 31 July 2027. Fees are exclusive of 18% GST; authors from outside India pay in USD.
+                    Early bird registration closes on <strong>31 July 2027</strong>. All amounts in INR include 18% GST. Registrations from <strong>1 to 25 August 2027</strong> carry a 10% surcharge in all categories. At least one author of each accepted paper must complete full registration by 31 July 2027 and present the paper in person. USD fees apply to authors and participants from outside India.
                   </p>
                 </div>
               </div>
@@ -109,13 +109,13 @@ export default function RegistrationPage() {
             </div>
 
             {/* Fee Table */}
-            <FeeTable currency={isUSD ? "USD" : "INR"} />
+            <FeeTable />
 
             {/* Note under fee table */}
             <div className="mt-4 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-body text-sm flex items-start gap-3 shadow-xs">
               <Info size={18} className="text-amber-700 mt-0.5 flex-shrink-0" />
               <p className="text-amber-950 font-medium leading-relaxed">
-                Fees are exclusive of 18% GST. Authors from outside India pay in USD. At least one author per accepted paper must register by 31 July 2027.
+                All amounts in INR include 18% GST. USD fees apply to authors and participants from outside India. At least one author per accepted paper must register by 31 July 2027.
               </p>
             </div>
           </AnimatedSection>

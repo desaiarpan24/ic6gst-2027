@@ -23,7 +23,7 @@ const timeline = [
   {
     date: "May 15, 2027",
     event: "Full Paper Submission Deadline",
-    desc: "Submit your complete research paper via Microsoft CMT. 11:59 PM IST.",
+    desc: "Submit your complete research paper via ConfConnects. 11:59 PM IST.",
     status: "deadline",
     icon: "📄",
   },

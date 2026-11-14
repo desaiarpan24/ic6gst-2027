@@ -84,7 +84,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="https://cmt3.research.microsoft.com/ICSixGST2027"
+                href="https://app.confconnects.com/conference/nbCZz3fX1pFSgGiOY9NZ/mypapers"
                 className="ml-3 px-4 py-2 bg-teal-DEFAULT text-white text-sm font-semibold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg hover:shadow-teal-DEFAULT/30 hover:-translate-y-0.5"
               >
                 Submit Paper
@@ -121,7 +121,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="https://cmt3.research.microsoft.com/ICSixGST2027"
+                href="https://app.confconnects.com/conference/nbCZz3fX1pFSgGiOY9NZ/mypapers"
                 className="mt-3 px-4 py-3 bg-teal-DEFAULT text-white text-sm font-semibold rounded-lg text-center hover:bg-teal-600 transition-colors"
               >
                 Submit Paper →
