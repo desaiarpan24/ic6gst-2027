@@ -231,7 +231,7 @@ const advisoryData: CommitteeRole[] = [
       },
       {
         name: "Prof. K V S Hari",
-        affiliation: "Director, Centre for Brain Research, IISc Bangalore",
+        affiliation: "Director, Centre for Brain Research and Professor, Department of ECE, IISc Bangalore",
       },
       {
         name: "Mr. Nilesh Ranpura",
