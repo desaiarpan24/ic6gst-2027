@@ -56,13 +56,15 @@ export default function Navbar() {
                 <Logo className="h-10 w-auto" />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-navy font-black text-lg tracking-tight group-hover:opacity-90 transition-opacity">
-                  <span className="font-ic text-cyan-600">IC</span>
-                  <span className="font-6g text-teal-600 tracking-wider">6G</span>
-                  <span className="font-st text-emerald-600">ST</span>
-                  <span className="text-navy ml-1 font-sans font-extrabold">2027</span>
-                </span>
-                <span className="text-xs text-slate-light hidden sm:block">
+                <div className="flex items-center gap-1.5">
+                  <span className="px-2 py-0.5 rounded-md bg-[#0F172A] border border-slate-700/60 font-black text-base tracking-tight shadow-xs inline-flex items-center gap-0.5">
+                    <span className="font-ic text-[#FF9933]">IC</span>
+                    <span className="font-6g text-white tracking-wider">6G</span>
+                    <span className="font-st text-[#22c55e]">ST</span>
+                  </span>
+                  <span className="text-navy font-sans font-black text-lg">2027</span>
+                </div>
+                <span className="text-[11px] text-slate-500 hidden sm:block">
                   PDEU, Gandhinagar
                 </span>
               </div>

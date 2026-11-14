@@ -116,22 +116,22 @@ export default function HomePage() {
                 </span>
               </div>
 
-              {/* Title with distinct fonts highlighting IC, 6G, ST */}
+              {/* Title with distinct fonts highlighting IC, 6G, ST (Indian Flag theme: Saffron, White, Green) */}
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-none mb-4 tracking-tight">
                 <span
-                  className="font-ic text-cyan-400 inline-block hover:scale-105 transition-transform"
+                  className="font-ic text-[#FF9933] inline-block hover:scale-105 transition-transform drop-shadow-[0_0_15px_rgba(255,153,51,0.35)]"
                   title="Intelligent Computing"
                 >
                   IC
                 </span>
                 <span
-                  className="font-6g text-teal-accent inline-block mx-0.5 hover:scale-105 transition-transform tracking-wider"
+                  className="font-6g text-white inline-block mx-0.5 hover:scale-105 transition-transform tracking-wider drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
                   title="6G & Beyond Communication"
                 >
                   6G
                 </span>
                 <span
-                  className="font-st text-emerald-400 inline-block hover:scale-105 transition-transform"
+                  className="font-st text-[#22c55e] inline-block hover:scale-105 transition-transform drop-shadow-[0_0_15px_rgba(34,197,94,0.35)]"
                   title="Sustainable Technologies"
                 >
                   ST
@@ -157,16 +157,16 @@ export default function HomePage() {
 
               {/* Domain Breakdown Badges */}
               <div className="flex flex-wrap items-center gap-2 mb-6 text-xs sm:text-sm">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 font-ic">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/15 border border-orange-400/30 text-[#FF9933] font-ic">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF9933]" />
                   <strong className="font-bold">IC:</strong> Intelligent Computing
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-accent font-6g">
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/30 text-white font-6g">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white" />
                   <strong className="font-bold">6G:</strong> 6G &amp; Beyond
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 font-st">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/15 border border-green-400/30 text-emerald-400 font-st">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e]" />
                   <strong className="font-bold">ST:</strong> Sustainable Tech
                 </span>
               </div>
