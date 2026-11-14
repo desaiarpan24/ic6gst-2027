@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -163,32 +163,6 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {/* Named Organizing Chairs */}
-                    <div className="mt-6 pt-6 border-t border-gray-100">
-                      <p className="text-xs font-bold uppercase tracking-wider text-teal-DEFAULT mb-3">
-                        Organizing Leadership
-                      </p>
-                      <div className="space-y-3 text-xs sm:text-sm text-slate-body">
-                        <div className="p-3 rounded-xl bg-white border border-gray-100 shadow-xs">
-                          <p className="font-bold text-navy">Dr. Arpan Desai — Organizing Chair</p>
-                          <p className="text-slate-light text-xs">
-                            Email: <a href="mailto:arpan.desai@sot.pdpu.ac.in" className="text-teal-DEFAULT hover:underline">arpan.desai@sot.pdpu.ac.in</a> | Phone: <a href="tel:+919909980477" className="text-teal-DEFAULT hover:underline">+91 99099 80477</a>
-                          </p>
-                        </div>
-                        <div className="p-3 rounded-xl bg-white border border-gray-100 shadow-xs">
-                          <p className="font-bold text-navy">Dr. Ganga Prasad Pandey — Organizing Chair</p>
-                          <p className="text-slate-light text-xs">
-                            Email: <a href="mailto:gangaprasad.pandey@sot.pdpu.ac.in" className="text-teal-DEFAULT hover:underline">gangaprasad.pandey@sot.pdpu.ac.in</a>
-                          </p>
-                        </div>
-                        <div className="p-3 rounded-xl bg-white border border-gray-100 shadow-xs">
-                          <p className="font-bold text-navy">Dr. Abhishek Kumar — Publication Chair</p>
-                          <p className="text-slate-light text-xs">
-                            Email: <a href="mailto:abhishek.kumar@sot.pdpu.ac.in" className="text-teal-DEFAULT hover:underline">abhishek.kumar@sot.pdpu.ac.in</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
