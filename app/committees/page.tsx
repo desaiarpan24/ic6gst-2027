@@ -59,9 +59,9 @@ const leadershipData: CommitteeRole[] = [
   {
     role: "Steering Committee",
     members: [
-      { name: "Dr. Shakti Mishra", affiliation: "PDEU, Gandhinagar" },
-      { name: "Prof. Bhawanisingh Desai", affiliation: "PDEU, Gandhinagar" },
-      { name: "Dr. Pavan Gurrala", affiliation: "PDEU, Gandhinagar" },
+      { name: "Dr. Shakti Mishra", affiliation: "Dean, SoT, PDEU, Gandhinagar" },
+      { name: "Prof. Bhawanisingh Desai", affiliation: "Dean R&D, PDEU, Gandhinagar" },
+      { name: "Dr. Pavan Gurrala", affiliation: "Associate Dean, SoT, PDEU, Gandhinagar" },
     ],
   },
 ];
