@@ -275,6 +275,10 @@ const advisoryData: CommitteeRole[] = [
         name: "Prof. Manoj Singh Gaur",
         affiliation: "Director, IIT Jammu",
       },
+      {
+        name: "Prof. Vineet Vashista",
+        affiliation: "Associate Professor, Indian Institute of Technology Gandhinagar",
+      },
     ],
   },
   {
@@ -303,6 +307,10 @@ const advisoryData: CommitteeRole[] = [
       {
         name: "Dr. Merih Palandoken",
         affiliation: "Izmir Katip Celebi University, Turkey",
+      },
+      {
+        name: "Prof. Raj Jain",
+        affiliation: "Professor of Computer Science and Engineering, Washington University in St. Louis, USA",
       },
     ],
   },
