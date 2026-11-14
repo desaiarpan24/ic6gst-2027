@@ -245,7 +245,7 @@ const advisoryData: CommitteeRole[] = [
       },
       {
         name: "Dr. Sameer S M",
-        affiliation: "NIT Calicut",
+        affiliation: "Professor, Dept. of Electronics & Communication Engineering, National Institute of Technology Calicut",
       },
       {
         name: "Prof. Amit Bhatt",
@@ -253,19 +253,19 @@ const advisoryData: CommitteeRole[] = [
       },
       {
         name: "Prof. A. Chockalingam",
-        affiliation: "IISc Bangalore",
+        affiliation: "Professor, Dept. of Electrical Communication Engineering, IISc Bangalore",
       },
       {
         name: "Dr. K V S Hari",
-        affiliation: "IISc Bangalore",
+        affiliation: "Director, Centre for Brain Research, IISc Bangalore",
       },
       {
         name: "Mr. Nilesh Ranpura",
-        affiliation: "Einfochips",
+        affiliation: "Associate VP - ASIC, Einfochips",
       },
       {
         name: "Dr. Usha Mehta",
-        affiliation: "Nirma University",
+        affiliation: "Professor, Dept. of Electronics & Communication Engineering, Nirma University",
       },
       {
         name: "Dr. Kiran Amin",
@@ -301,11 +301,11 @@ const advisoryData: CommitteeRole[] = [
         affiliation: "Univ. of Oulu, Finland",
       },
       {
-        name: "Dr. Nguyen Truong Khang",
+        name: "Prof. Nguyen Truong Khang",
         affiliation: "Van Lang University, Vietnam",
       },
       {
-        name: "Dr. Merih Palandoken",
+        name: "Prof. Merih Palandoken",
         affiliation: "Izmir Katip Celebi University, Turkey",
       },
       {
