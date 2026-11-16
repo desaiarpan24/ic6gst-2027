@@ -44,7 +44,7 @@ export default function RegistrationPage() {
 
       {/* Main Registration Content */}
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Early Bird 10-Day Policy Instruction Card (No Counter) */}
           <AnimatedSection>
             <div className="mb-8 p-6 sm:p-7 rounded-3xl bg-navy text-white border border-teal-DEFAULT/30 shadow-xl">
@@ -109,7 +109,7 @@ export default function RegistrationPage() {
             </div>
 
             {/* Fee Table */}
-            <FeeTable />
+            <FeeTable activeCurrency={isUSD ? "USD" : "INR"} />
 
             {/* Note under fee table */}
             <div className="mt-4 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-body text-sm flex items-start gap-3 shadow-xs">

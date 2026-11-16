@@ -76,35 +76,39 @@ const feeSchedule: FeeRow[] = [
   },
 ];
 
-export default function FeeTable() {
+interface FeeTableProps {
+  activeCurrency?: "INR" | "USD";
+}
+
+export default function FeeTable({ activeCurrency }: FeeTableProps = {}) {
   return (
     <div className="space-y-6">
-      {/* Table Container */}
-      <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-md bg-white">
-        <table className="w-full min-w-[760px] text-sm sm:text-base border-collapse">
+      {/* Table Container - Fits whole table directly on page without scrolling */}
+      <div className="rounded-2xl border border-slate-200 shadow-md bg-white overflow-hidden">
+        <table className="w-full table-auto sm:table-fixed text-xs sm:text-sm border-collapse">
           <thead>
             <tr className="bg-[#0f172a] text-white">
-              <th className="text-left px-4 py-3.5 font-semibold whitespace-nowrap">
+              <th className="text-left px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15%]">
                 Category
               </th>
-              <th className="text-left px-4 py-3.5 font-semibold whitespace-nowrap">
+              <th className="text-left px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[23%]">
                 Type
               </th>
-              <th className="text-right px-4 py-3.5 font-semibold whitespace-nowrap">
-                Early bird (INR, incl. GST)
-                <span className="block text-xs font-normal text-slate-300">until 31 Jul 2027</span>
+              <th className={`text-right px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15.5%] transition-colors ${activeCurrency === "INR" ? "bg-slate-800 text-teal-300" : ""}`}>
+                <span>Early Bird (INR)</span>
+                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">incl. GST • by 31 Jul</span>
               </th>
-              <th className="text-right px-4 py-3.5 font-semibold whitespace-nowrap">
-                Final (INR, incl. GST)
-                <span className="block text-xs font-normal text-slate-300">1–25 Aug 2027</span>
+              <th className={`text-right px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15.5%] transition-colors ${activeCurrency === "INR" ? "bg-slate-800 text-teal-300" : ""}`}>
+                <span>Final (INR)</span>
+                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">1–25 Aug (+10%)</span>
               </th>
-              <th className="text-right px-4 py-3.5 font-semibold whitespace-nowrap">
-                Foreign authors (USD)
-                <span className="block text-xs font-normal text-slate-300">early bird</span>
+              <th className={`text-right px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15%] transition-colors ${activeCurrency === "USD" ? "bg-slate-800 text-teal-300" : ""}`}>
+                <span>USD Early</span>
+                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">Foreign • by 31 Jul</span>
               </th>
-              <th className="text-right px-4 py-3.5 font-semibold whitespace-nowrap">
-                Foreign authors (USD)
-                <span className="block text-xs font-normal text-slate-300">final</span>
+              <th className={`text-right px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15%] transition-colors ${activeCurrency === "USD" ? "bg-slate-800 text-teal-300" : ""}`}>
+                <span>USD Final</span>
+                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">Foreign • 1–25 Aug</span>
               </th>
             </tr>
           </thead>
@@ -116,29 +120,29 @@ export default function FeeTable() {
                   idx % 2 === 1 ? "bg-slate-50/70" : "bg-white"
                 }`}
               >
-                <td className="px-4 py-3.5 font-medium text-slate-900 whitespace-nowrap">
+                <td className="px-2 sm:px-3 md:px-4 py-3 font-semibold text-slate-900">
                   {row.category}
                 </td>
-                <td className="px-4 py-3.5 text-slate-700 whitespace-nowrap">
-                  <div className="flex items-center gap-1.5">
-                    <span>{row.type}</span>
+                <td className="px-2 sm:px-3 md:px-4 py-3 text-slate-700">
+                  <div className="flex flex-wrap items-center gap-1 sm:gap-1.5">
+                    <span className="font-medium">{row.type}</span>
                     {row.isIEEEMember && (
-                      <span className="inline-block bg-[#06b6d4] text-white rounded-full px-2.5 py-0.5 text-xs font-bold">
+                      <span className="inline-block bg-[#06b6d4] text-white rounded-full px-1.5 py-0.5 text-[10px] sm:text-xs font-bold whitespace-nowrap">
                         IEEE Rate
                       </span>
                     )}
                   </div>
                 </td>
-                <td className="px-4 py-3.5 text-right font-bold text-[#0e7490] whitespace-nowrap">
+                <td className={`px-2 sm:px-3 md:px-4 py-3 text-right font-bold text-[#0e7490] whitespace-nowrap ${activeCurrency === "INR" ? "bg-teal-50/60" : ""}`}>
                   {row.inrEarly}
                 </td>
-                <td className="px-4 py-3.5 text-right font-semibold text-slate-800 whitespace-nowrap">
+                <td className={`px-2 sm:px-3 md:px-4 py-3 text-right font-semibold text-slate-800 whitespace-nowrap ${activeCurrency === "INR" ? "bg-teal-50/60" : ""}`}>
                   {row.inrFinal}
                 </td>
-                <td className="px-4 py-3.5 text-right font-bold text-[#0e7490] whitespace-nowrap">
+                <td className={`px-2 sm:px-3 md:px-4 py-3 text-right font-bold text-[#0e7490] whitespace-nowrap ${activeCurrency === "USD" ? "bg-teal-50/60" : ""}`}>
                   {row.usdEarly}
                 </td>
-                <td className="px-4 py-3.5 text-right font-semibold text-slate-800 whitespace-nowrap">
+                <td className={`px-2 sm:px-3 md:px-4 py-3 text-right font-semibold text-slate-800 whitespace-nowrap ${activeCurrency === "USD" ? "bg-teal-50/60" : ""}`}>
                   {row.usdFinal}
                 </td>
               </tr>
