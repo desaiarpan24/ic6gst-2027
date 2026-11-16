@@ -19,6 +19,7 @@ import {
   Users,
   Award,
   Calendar,
+  ExternalLink,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -187,8 +188,12 @@ export default function CallForPapersPage() {
               },
               {
                 title: "Template",
-                desc: "Submissions must adhere strictly to the standard IEEE Conference Proceedings double-column format. Official IEEE conference templates: https://www.ieee.org/conferences/publishing/templates.html",
+                desc: "Submissions must adhere strictly to the standard IEEE Conference Proceedings double-column format.",
                 emoji: "📐",
+                link: {
+                  href: "https://www.ieee.org/conferences/publishing/templates.html",
+                  label: "Official IEEE Templates",
+                },
               },
               {
                 title: "Review Process",
@@ -212,10 +217,25 @@ export default function CallForPapersPage() {
               },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.08}>
-                <div className="p-6 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-lg transition-all duration-300 bg-white h-full">
-                  <div className="text-4xl mb-4">{item.emoji}</div>
-                  <h3 className="font-bold text-navy text-lg mb-2">{item.title}</h3>
-                  <p className="text-slate-light text-sm leading-relaxed">{item.desc}</p>
+                <div className="p-6 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-lg transition-all duration-300 bg-white h-full flex flex-col justify-between">
+                  <div>
+                    <div className="text-4xl mb-4">{item.emoji}</div>
+                    <h3 className="font-bold text-navy text-lg mb-2">{item.title}</h3>
+                    <p className="text-slate-light text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                  {"link" in item && item.link && (
+                    <div className="mt-4 pt-3 border-t border-gray-100">
+                      <a
+                        href={(item.link as { href: string; label: string }).href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-teal-DEFAULT/10 hover:bg-teal-DEFAULT text-teal-DEFAULT hover:text-white font-semibold text-xs transition-all duration-200 border border-teal-DEFAULT/25 hover:shadow-sm"
+                      >
+                        <span>{(item.link as { href: string; label: string }).label}</span>
+                        <ExternalLink size={13} className="flex-shrink-0" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </AnimatedSection>
             ))}
