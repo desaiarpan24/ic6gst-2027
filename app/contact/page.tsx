@@ -137,10 +137,21 @@ export default function ContactPage() {
                     <h3 className="font-black text-navy text-xl sm:text-2xl mb-1">
                       IC6GST 2027 Secretariat
                     </h3>
-                    <p className="text-slate-light text-sm mb-4 leading-relaxed">
-                      Department of Information and Communication Technology (ICT)<br />
-                      School of Technology, Pandit Deendayal Energy University (PDEU)
-                    </p>
+                    <div className="mb-4">
+                      <p className="text-slate-light text-sm leading-relaxed mb-2.5">
+                        Department of Information and Communication Technology (ICT)<br />
+                        School of Technology, Pandit Deendayal Energy University (PDEU)
+                      </p>
+                      <a
+                        href="https://pdeu.ac.in/school-of-technology/academics/information-and-communication-technology"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-DEFAULT/10 hover:bg-teal-DEFAULT text-teal-DEFAULT hover:text-white font-semibold text-xs transition-all border border-teal-DEFAULT/30"
+                      >
+                        <span>Visit Department of ICT Website</span>
+                        <ExternalLink size={12} className="flex-shrink-0" />
+                      </a>
+                    </div>
 
                     <div className="space-y-4">
                       {/* Official Inquiry Email */}

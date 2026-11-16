@@ -65,7 +65,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
+                {/* Contact */}
         <div>
           <h3 className="text-white font-bold mb-4 uppercase text-xs tracking-widest">Contact</h3>
           <ul className="space-y-3 text-sm">
@@ -80,14 +80,25 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <a
-            href="https://www.pdpu.ac.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-1.5 text-xs text-teal-accent hover:underline"
-          >
-            Visit PDEU Website <ExternalLink size={12} />
-          </a>
+          <div className="mt-4 flex flex-col gap-2.5">
+            <a
+              href="https://pdeu.ac.in/school-of-technology/academics/information-and-communication-technology"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-teal-DEFAULT/20 hover:bg-teal-DEFAULT text-teal-accent hover:text-navy-dark font-semibold text-xs transition-all border border-teal-DEFAULT/40 w-fit group shadow-xs"
+            >
+              <span>Visit Dept. of ICT Website</span>
+              <ExternalLink size={13} className="flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
+            </a>
+            <a
+              href="https://www.pdpu.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-teal-accent transition-colors"
+            >
+              Visit PDEU Main Portal <ExternalLink size={11} />
+            </a>
+          </div>
         </div>
       </div>
 
