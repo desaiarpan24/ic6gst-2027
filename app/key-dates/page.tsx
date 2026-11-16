@@ -97,7 +97,7 @@ export default function KeyDatesPage() {
       <section className="py-16 bg-background border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <AnimatedSection>
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-8">
               <div className="bg-navy px-6 py-4 text-white flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Calendar className="text-teal-accent" size={20} />
@@ -124,6 +124,30 @@ export default function KeyDatesPage() {
                     </span>
                   </div>
                 ))}
+              </div>
+            </div>
+          
+            {/* Important Notes - Placed directly above Schedule */}
+            <div className="p-6 rounded-2xl border border-amber-200 bg-amber-50 shadow-sm">
+              <div className="flex items-start gap-3.5">
+                <span className="text-2xl mt-0.5">⚠️</span>
+                <div>
+                  <h3 className="font-bold text-amber-900 text-lg mb-2">Important Notes</h3>
+                  <ul className="space-y-2 text-amber-900 text-sm leading-relaxed">
+                    <li>
+                      • All deadlines are at{" "}
+                      <strong>11:59 PM Indian Standard Time (IST / UTC+5:30)</strong>.
+                    </li>
+                    <li>• Any change to deadlines will be announced on this page.</li>
+                    <li>
+                      • Authors are encouraged to submit{" "}
+                      <strong>well before the deadline</strong> to avoid last-minute system load.
+                    </li>
+                    <li>
+                      • The conference is <strong>physical-only</strong>; virtual presentations are not available.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </AnimatedSection>
@@ -224,36 +248,6 @@ export default function KeyDatesPage() {
                   </AnimatedSection>
                 );
               })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Note */}
-      <section className="py-12 bg-background">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="p-6 rounded-2xl border border-amber-200 bg-amber-50">
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">⚠️</span>
-              <div>
-                <h3 className="font-bold text-amber-900 mb-2">Important Notes</h3>
-                <ul className="space-y-2 text-amber-800 text-sm">
-                  <li>
-                    • All deadlines are at{" "}
-                    <strong>11:59 PM Indian Standard Time (IST / UTC+5:30)</strong>
-                  </li>
-                  <li>• Any change to deadlines will be announced on this page.</li>
-                  <li>
-                    • Authors are encouraged to submit{" "}
-                    <strong>well before the deadline</strong> to avoid last-minute
-                    system load.
-                  </li>
-                  <li>
-                    • The conference is <strong>physical-only</strong>; virtual
-                    presentations are not available.
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
