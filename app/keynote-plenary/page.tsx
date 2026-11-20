@@ -47,7 +47,7 @@ const speakers: Speaker[] = [
     type: "Keynote",
     roleBadge: "Keynote Speaker",
     badgeColor: "bg-gradient-to-r from-amber-500 to-orange-500 text-white",
-    designation: "Qualcomm Institute Chair Professor",
+    designation: "Chair, Bharat 6G Alliance & Qualcomm Chair Professor",
     department: "Head, Department of Electrical Engineering",
     institution: "Indian Institute of Technology (IIT) Madras",
     location: "Chennai, Tamil Nadu, India",

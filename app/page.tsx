@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 };
 
 const newsItems = [
+  "✨ KEYNOTE ANNOUNCEMENT: We are delighted to announce that Dr. R. David Koilpillai (Chair, Bharat 6G Alliance & Qualcomm Chair Professor, IIT Madras) will deliver the Keynote Address: “Cellular Evolution to 6G – An India Perspective”",
   "📢 Call for papers is now open!! Submit your research to IC6GST 2027",
   "🎙️ Keynote and plenary talks by leading experts from academia, industry and the Bharat 6G ecosystem",
   "🤝 Technically Co-sponsored by IEEE Gujarat Section and IEEE Signal Processing Society, Gujarat Chapter",
@@ -88,7 +89,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      
+      {/* KEYNOTE HIGHLIGHT ANNOUNCEMENT BANNER */}
+      <section className="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 text-white py-2.5 px-4 shadow-lg border-b border-amber-400/40 relative z-20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-2.5 text-xs sm:text-sm">
+            <span className="px-3 py-1 rounded-full bg-white text-navy font-black text-[11px] uppercase tracking-wider shadow-sm flex-shrink-0 animate-pulse">
+              ⭐ Event Highlight
+            </span>
+            <span className="leading-snug">
+              We are delighted to announce that <strong>Dr. R. David Koilpillai</strong> (Chair, Bharat 6G Alliance &amp; Qualcomm Chair Professor, IIT Madras) will deliver the Keynote Address: <strong className="text-amber-100 font-bold">&ldquo;Cellular Evolution to 6G – An India Perspective&rdquo;</strong>
+            </span>
+          </div>
+          <Link
+            href="/keynote-plenary"
+            className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-navy text-teal-accent hover:text-white hover:bg-navy-dark font-bold text-xs transition-all border border-teal-DEFAULT/40 shadow-sm hover:scale-105"
+          >
+            <span>View Keynote Details</span>
+            <ArrowRight size={13} />
+          </Link>
+        </div>
+      </section>
+
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center bg-navy-dark overflow-hidden">
         {/* Background image */}
@@ -209,9 +230,63 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: Countdown / Paper Deadline Box */}
-            <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end w-full min-w-0">
-              <div className="w-full max-w-sm sm:max-w-md p-4 sm:p-6 lg:p-7 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 glow-teal shadow-2xl overflow-hidden">
+            {/* Right Column: Featured Keynote Speaker Announcement & Countdown */}
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col items-center lg:items-end w-full min-w-0 space-y-5">
+              {/* Featured Keynote Announcement Card */}
+              <div className="w-full max-w-sm sm:max-w-md p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-white/10 via-white/5 to-amber-500/10 backdrop-blur-md border border-amber-400/50 shadow-2xl shadow-amber-500/10 relative overflow-hidden group hover:border-amber-400 transition-all">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/15 rounded-full blur-2xl pointer-events-none" />
+                
+                {/* Badge Header */}
+                <div className="flex items-center justify-between gap-2 mb-3.5">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black text-xs uppercase tracking-wider shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    Keynote Address
+                  </span>
+                  <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider">Highlight of Event</span>
+                </div>
+
+                <div className="flex items-start gap-4 mb-3.5">
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-amber-400/60 flex-shrink-0 shadow-lg">
+                    <img
+                      src="/images/speakers/dr-r-david-koilpillai.jpg"
+                      alt="Dr. R. David Koilpillai"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-black text-white text-base sm:text-lg leading-tight group-hover:text-amber-300 transition-colors">
+                      Dr. R. David Koilpillai
+                    </h3>
+                    <p className="text-amber-300 text-xs font-bold leading-tight mt-1">
+                      Chair, Bharat 6G Alliance
+                    </p>
+                    <p className="text-gray-300 text-xs leading-tight mt-0.5">
+                      Qualcomm Chair Professor, IIT Madras
+                    </p>
+                  </div>
+                </div>
+
+                {/* Talk title box */}
+                <div className="p-3.5 rounded-2xl bg-navy-dark/80 border border-white/15 mb-3.5">
+                  <p className="text-[11px] uppercase tracking-wider font-semibold text-teal-accent mb-1 flex items-center gap-1.5">
+                    <Mic size={13} className="text-teal-accent" /> Keynote Talk Title:
+                  </p>
+                  <p className="text-white text-xs sm:text-sm font-bold leading-snug">
+                    &ldquo;Cellular Evolution to 6G – An India Perspective&rdquo;
+                  </p>
+                </div>
+
+                <Link
+                  href="/keynote-plenary"
+                  className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-500/20 hover:from-amber-500 hover:to-orange-500 text-amber-200 hover:text-white border border-amber-400/40 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm hover:shadow-amber-500/30"
+                >
+                  <span>Explore Keynote &amp; Plenary Details</span>
+                  <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              {/* Countdown Timer */}
+              <div className="w-full max-w-sm sm:max-w-md p-4 sm:p-5 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 glow-teal shadow-2xl overflow-hidden">
                 <CountdownTimer dark label="Full Paper Submission Deadline" />
               </div>
             </div>
