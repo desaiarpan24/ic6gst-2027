@@ -166,6 +166,7 @@ const tpcData: CommitteeRole[] = [
     members: [
       { name: "Dr. Pradip Barik", affiliation: "PDEU, Gandhinagar" },
       { name: "Dr. Deborsi Basu", affiliation: "Ericsson Research, India" },
+      { name: "Dr. Amit Kumar", affiliation: "CNRS@CREATE, Singapore" },
     ],
   },
   {
