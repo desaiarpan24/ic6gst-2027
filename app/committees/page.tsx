@@ -300,6 +300,10 @@ const advisoryData: CommitteeRole[] = [
         name: "Prof. Nouredine Hadjsaid",
         affiliation: "CNRS, G2E Lab, Grenoble INP, Université Grenoble Alpes (UGA), Grenoble, France",
       },
+      {
+        name: "Dr. Aakash Bansal (he/him)",
+        affiliation: "Assistant Professor, Loughborough University, UK",
+      },
     ],
   },
 ];
