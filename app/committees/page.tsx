@@ -198,6 +198,10 @@ const tpcData: CommitteeRole[] = [
         name: "Dr. Manish Kumar",
         affiliation: "Associate Professor, DAU Gandhinagar",
       },
+      {
+        name: "Dr. Veerapandiyan Veerasamy",
+        affiliation: "Lecturer, Curtin University, Global Campus, Singapore",
+      },
     ],
   },
 ];
@@ -290,6 +294,10 @@ const advisoryData: CommitteeRole[] = [
       {
         name: "Prof. Raj Jain",
         affiliation: "Professor of Computer Science and Engineering, Washington University in St. Louis, USA",
+      },
+      {
+        name: "Prof. Nouredine Hadjsaid",
+        affiliation: "CNRS, G2E Lab, Grenoble INP, Université Grenoble Alpes (UGA), Grenoble, France",
       },
     ],
   },

@@ -1,12 +1,8 @@
-"use client";
-
-import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   Mail,
   MapPin,
-  Send,
   Star,
   Award,
   Handshake,
@@ -16,33 +12,6 @@ import {
 } from "lucide-react";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    const emailSubject = encodeURIComponent(
-      `[IC6GST 2027 Query] ${form.subject || "Conference Inquiry"}`
-    );
-    const emailBody = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
-    );
-    // Send email to ic6gst@gmail.com
-    window.location.href = `mailto:ic6gst@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-    setTimeout(() => {
-      setSubmitted(true);
-      setLoading(false);
-      setForm({ name: "", email: "", subject: "", message: "" });
-    }, 600);
-  };
-
   const sponsorTiers = [
     {
       tier: "Platinum Sponsor",
@@ -114,244 +83,116 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Cards & Form */}
+      {/* Conference Secretariat & Contact Info */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left: Contact Info */}
-            <AnimatedSection direction="left">
-              <h2 className="text-3xl font-black text-navy mb-8">
-                Conference Secretariat
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <Badge className="mb-3 text-xs bg-teal-DEFAULT text-white">
+                Conference Organizing Secretariat
+              </Badge>
+              <h2 className="text-3xl sm:text-4xl font-black text-navy">
+                IC6GST 2027 Secretariat
               </h2>
+              <div className="section-divider mx-auto mt-4" />
+            </div>
 
-              {/* Primary Contact Card — without personal chair name or phone */}
-              <div className="p-8 rounded-3xl border border-teal-DEFAULT/30 bg-gradient-to-br from-background via-white to-teal-DEFAULT/5 shadow-lg mb-8">
-                <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-teal-DEFAULT/15 flex items-center justify-center flex-shrink-0">
-                    <Building2 size={26} className="text-teal-DEFAULT" />
+            {/* Main Secretariat Card */}
+            <div className="p-8 sm:p-10 rounded-3xl border border-teal-DEFAULT/30 bg-gradient-to-br from-background via-white to-teal-DEFAULT/5 shadow-lg mb-8">
+              <div className="flex flex-col sm:flex-row items-start gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-teal-DEFAULT/15 flex items-center justify-center flex-shrink-0 shadow-inner">
+                  <Building2 size={32} className="text-teal-DEFAULT" />
+                </div>
+                <div className="flex-1 w-full">
+                  <h3 className="font-black text-navy text-xl sm:text-2xl mb-2">
+                    Department of Information and Communication Technology (ICT)
+                  </h3>
+                  <p className="text-slate-light text-base leading-relaxed mb-4">
+                    School of Technology, Pandit Deendayal Energy University (PDEU)
+                  </p>
+
+                  <div className="mb-6">
+                    <a
+                      href="https://pdeu.ac.in/school-of-technology/academics/information-and-communication-technology"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-teal-DEFAULT/10 hover:bg-teal-DEFAULT text-teal-DEFAULT hover:text-white font-semibold text-xs sm:text-sm transition-all border border-teal-DEFAULT/30 shadow-sm"
+                    >
+                      <span>Visit Department of ICT Website</span>
+                      <ExternalLink size={14} className="flex-shrink-0" />
+                    </a>
                   </div>
-                  <div className="flex-1">
-                    <Badge className="mb-3 text-xs bg-teal-DEFAULT text-white">
-                      Conference Organizing Secretariat
-                    </Badge>
-                    <h3 className="font-black text-navy text-xl sm:text-2xl mb-1">
-                      IC6GST 2027 Secretariat
-                    </h3>
-                    <div className="mb-4">
-                      <p className="text-slate-light text-sm leading-relaxed mb-2.5">
-                        Department of Information and Communication Technology (ICT)<br />
-                        School of Technology, Pandit Deendayal Energy University (PDEU)
-                      </p>
-                      <a
-                        href="https://pdeu.ac.in/school-of-technology/academics/information-and-communication-technology"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-DEFAULT/10 hover:bg-teal-DEFAULT text-teal-DEFAULT hover:text-white font-semibold text-xs transition-all border border-teal-DEFAULT/30"
-                      >
-                        <span>Visit Department of ICT Website</span>
-                        <ExternalLink size={12} className="flex-shrink-0" />
-                      </a>
-                    </div>
 
-                    <div className="space-y-4">
-                      {/* Official Inquiry Email */}
-                      <a
-                        href="mailto:ic6gst@gmail.com"
-                        className="flex items-center gap-3 text-sm font-semibold text-slate-body hover:text-teal-DEFAULT transition-colors group"
-                      >
-                        <span className="w-10 h-10 rounded-xl bg-teal-DEFAULT/10 flex items-center justify-center group-hover:bg-teal-DEFAULT group-hover:text-white transition-all flex-shrink-0">
-                          <Mail size={16} className="text-teal-DEFAULT group-hover:text-white" />
-                        </span>
-                        <div>
-                          <p className="text-xs text-slate-light font-normal">Official Inquiry Email</p>
-                          <p className="text-teal-DEFAULT font-bold text-base">ic6gst@gmail.com</p>
-                        </div>
-                      </a>
-
-                      {/* Location */}
-                      <div className="flex items-start gap-3 text-sm text-slate-body">
-                        <span className="w-10 h-10 rounded-xl bg-teal-DEFAULT/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <MapPin size={16} className="text-teal-DEFAULT" />
-                        </span>
-                        <div>
-                          <p className="text-xs text-slate-light">Conference Venue Address</p>
-                          <p className="font-medium text-navy">
-                            Pandit Deendayal Energy University, Knowledge Corridor,
-                            Raisan, Gandhinagar – 382 426, Gujarat, India
-                          </p>
-                        </div>
+                  <div className="space-y-4 pt-2 border-t border-gray-100">
+                    {/* Official Inquiry Email */}
+                    <a
+                      href="mailto:ic6gst@gmail.com"
+                      className="flex items-center gap-4 p-3 rounded-2xl bg-white border border-gray-100 hover:border-teal-DEFAULT/40 hover:shadow-sm transition-all group"
+                    >
+                      <span className="w-11 h-11 rounded-xl bg-teal-DEFAULT/10 flex items-center justify-center group-hover:bg-teal-DEFAULT transition-all flex-shrink-0">
+                        <Mail size={18} className="text-teal-DEFAULT group-hover:text-white" />
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-xs text-slate-light font-medium">Official Inquiry Email</p>
+                        <p className="text-teal-DEFAULT font-bold text-base sm:text-lg">ic6gst@gmail.com</p>
                       </div>
+                      <span className="text-xs font-semibold text-teal-DEFAULT hidden sm:inline-flex items-center gap-1 group-hover:underline pr-2">
+                        Send Mail <ExternalLink size={12} />
+                      </span>
+                    </a>
 
-                      {/* Spam Folder Notice */}
-                      <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-950 flex items-start gap-2.5">
-                        <Info size={16} className="text-amber-700 mt-0.5 flex-shrink-0" />
-                        <p className="leading-relaxed">
-                          <strong>Note:</strong> Please make sure to check your <strong>spam / junk folder</strong> for email replies from the organizing committee (<code>ic6gst@gmail.com</code>).
+                    {/* Conference Venue Address */}
+                    <div className="flex items-start gap-4 p-3 rounded-2xl bg-white border border-gray-100">
+                      <span className="w-11 h-11 rounded-xl bg-teal-DEFAULT/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <MapPin size={18} className="text-teal-DEFAULT" />
+                      </span>
+                      <div>
+                        <p className="text-xs text-slate-light font-medium">Conference Venue Address</p>
+                        <p className="font-semibold text-navy text-sm sm:text-base leading-relaxed mt-0.5">
+                          Pandit Deendayal Energy University, Knowledge Corridor,
+                          Raisan, Gandhinagar – 382 426, Gujarat, India
                         </p>
                       </div>
                     </div>
 
+                    {/* Spam Folder Notice */}
+                    <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs sm:text-sm text-amber-950 flex items-start gap-3">
+                      <Info size={18} className="text-amber-700 mt-0.5 flex-shrink-0" />
+                      <p className="leading-relaxed">
+                        <strong>Note:</strong> Please make sure to check your <strong>spam / junk folder</strong> for email replies from the organizing committee (<code>ic6gst@gmail.com</code>).
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Quick Links */}
-              <div className="grid grid-cols-2 gap-4">
-                <a
-                  href="https://app.confconnects.com/conference/nbCZz3fX1pFSgGiOY9NZ/mypapers"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-5 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
-                >
-                  <p className="text-3xl mb-2">💻</p>
-                  <p className="font-bold text-navy text-sm group-hover:text-teal-DEFAULT transition-colors">
-                    ConfConnects Portal
-                  </p>
-                  <p className="text-xs text-slate-light mt-0.5">Submit Paper</p>
-                </a>
-                <a
-                  href="mailto:ic6gst@gmail.com?subject=IC6GST 2027 Query"
-                  className="p-5 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
-                >
-                  <p className="text-3xl mb-2">✉️</p>
-                  <p className="font-bold text-navy text-sm group-hover:text-teal-DEFAULT transition-colors">
-                    Email Inquiry
-                  </p>
-                  <p className="text-xs text-slate-light mt-0.5">ic6gst@gmail.com</p>
-                </a>
-              </div>
-            </AnimatedSection>
-
-            {/* Right: Contact Form */}
-            <AnimatedSection direction="right">
-              <h2 className="text-3xl font-black text-navy mb-8">Send a Message</h2>
-
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center p-12 rounded-3xl border border-teal-DEFAULT/30 bg-teal-DEFAULT/5 text-center min-h-[380px]">
-                  <div className="text-6xl mb-4">✅</div>
-                  <h3 className="font-bold text-navy text-2xl mb-3">
-                    Message Sent Successfully!
-                  </h3>
-                  <p className="text-slate-body max-w-md leading-relaxed mb-4">
-                    Thank you for reaching out to IC6GST 2027. Your message has been routed to <strong>ic6gst@gmail.com</strong>. The organizing committee will respond to your inquiry at the earliest.
-                  </p>
-                  <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-950 text-xs sm:text-sm leading-relaxed mb-6 max-w-md text-left flex items-start gap-2.5">
-                    <Info size={18} className="text-amber-700 mt-0.5 flex-shrink-0" />
-                    <span>
-                      <strong>Important:</strong> Please make sure to check your <strong>spam / junk folder</strong> for email replies from the organizing committee.
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="px-6 py-2.5 bg-teal-DEFAULT text-white font-semibold rounded-full hover:bg-teal-600 transition-colors shadow-sm"
-                  >
-                    Send Another Message
-                  </button>
-                </div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="space-y-5 p-8 rounded-3xl border border-gray-100 bg-background shadow-sm"
-                >
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label
-                        htmlFor="contact-name"
-                        className="block text-sm font-semibold text-navy mb-2"
-                      >
-                        Your Name *
-                      </label>
-                      <input
-                        id="contact-name"
-                        type="text"
-                        required
-                        value={form.name}
-                        onChange={(e) =>
-                          setForm({ ...form, name: e.target.value })
-                        }
-                        placeholder="Dr. / Prof. / Full Name"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-body placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-DEFAULT focus:border-transparent transition-all text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="contact-email"
-                        className="block text-sm font-semibold text-navy mb-2"
-                      >
-                        Email Address *
-                      </label>
-                      <input
-                        id="contact-email"
-                        type="email"
-                        required
-                        value={form.email}
-                        onChange={(e) =>
-                          setForm({ ...form, email: e.target.value })
-                        }
-                        placeholder="you@institution.edu"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-body placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-DEFAULT focus:border-transparent transition-all text-sm"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="contact-subject"
-                      className="block text-sm font-semibold text-navy mb-2"
-                    >
-                      Subject *
-                    </label>
-                    <input
-                      id="contact-subject"
-                      type="text"
-                      required
-                      value={form.subject}
-                      onChange={(e) =>
-                        setForm({ ...form, subject: e.target.value })
-                      }
-                      placeholder="Paper Submission, Registration, Sponsorship..."
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-body placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-DEFAULT focus:border-transparent transition-all text-sm"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="contact-message"
-                      className="block text-sm font-semibold text-navy mb-2"
-                    >
-                      Message *
-                    </label>
-                    <textarea
-                      id="contact-message"
-                      rows={5}
-                      required
-                      value={form.message}
-                      onChange={(e) =>
-                        setForm({ ...form, message: e.target.value })
-                      }
-                      placeholder="Write your query or message here..."
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-slate-body placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-DEFAULT focus:border-transparent transition-all text-sm resize-none"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full py-4 bg-teal-DEFAULT text-white font-bold rounded-xl hover:bg-teal-600 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-teal-DEFAULT/20 disabled:opacity-70 text-base"
-                  >
-                    {loading ? (
-                      <span>Sending Message...</span>
-                    ) : (
-                      <>
-                        <Send size={18} /> Send Message
-                      </>
-                    )}
-                  </button>
-                  <p className="text-xs text-slate-500 text-center leading-relaxed flex items-center justify-center gap-1.5 pt-1">
-                    <Info size={14} className="text-amber-600 flex-shrink-0" />
-                    <span>Please check your <strong>spam / junk folder</strong> for email replies from the organizing committee.</span>
-                  </p>
-                </form>
-              )}
-            </AnimatedSection>
-          </div>
+            {/* Quick Links */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a
+                href="https://app.confconnects.com/conference/nbCZz3fX1pFSgGiOY9NZ/mypapers"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-6 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
+              >
+                <p className="text-3xl mb-2">💻</p>
+                <p className="font-bold text-navy text-base group-hover:text-teal-DEFAULT transition-colors">
+                  ConfConnects Portal
+                </p>
+                <p className="text-xs text-slate-light mt-1">Submit & Manage Papers</p>
+              </a>
+              <a
+                href="mailto:ic6gst@gmail.com?subject=IC6GST 2027 Query"
+                className="p-6 rounded-2xl border border-gray-100 hover:border-teal-DEFAULT/30 hover:shadow-md transition-all text-center group bg-white"
+              >
+                <p className="text-3xl mb-2">✉️</p>
+                <p className="font-bold text-navy text-base group-hover:text-teal-DEFAULT transition-colors">
+                  Direct Email Inquiry
+                </p>
+                <p className="text-xs text-slate-light mt-1">ic6gst@gmail.com</p>
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -389,12 +230,15 @@ export default function ContactPage() {
                       {s.perks}
                     </p>
                   </div>
-                  <a
-                    href="mailto:ic6gst@gmail.com?subject=Sponsorship Inquiry - IC6GST 2027"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-accent hover:underline mt-2"
-                  >
-                    Inquire for Package <ExternalLink size={12} />
-                  </a>
+                  <div>
+                    <a
+                      href={`mailto:ic6gst@gmail.com?subject=${encodeURIComponent(`Sponsorship Inquiry - ${s.tier} - IC6GST 2027`)}`}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-teal-DEFAULT/20 hover:bg-teal-DEFAULT text-teal-accent hover:text-navy-dark font-semibold text-xs transition-all border border-teal-DEFAULT/40 w-fit mt-3 group shadow-sm"
+                    >
+                      <span>Inquire for Packages</span>
+                      <Mail size={13} className="flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    </a>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
