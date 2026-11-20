@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/call-for-papers", label: "Call for Papers" },
   { href: "/key-dates", label: "Key Dates" },
   { href: "/registration", label: "Registration" },
+  { href: "/keynote-plenary", label: "Keynote & Plenary Talks" },
   { href: "/committees", label: "Committees" },
   { href: "/venue", label: "Venue" },
   { href: "/contact", label: "Contact" },
@@ -71,14 +72,14 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden xl:flex items-center gap-1">
+            <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`nav-link px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`nav-link px-2.5 2xl:px-3 py-2 rounded-md text-xs 2xl:text-sm font-medium transition-colors whitespace-nowrap ${
                     pathname === link.href
-                      ? "text-teal-DEFAULT bg-teal-DEFAULT/10"
+                      ? "text-teal-DEFAULT bg-teal-DEFAULT/10 font-semibold"
                       : "text-slate-body hover:text-teal-DEFAULT hover:bg-gray-50"
                   }`}
                 >
@@ -87,7 +88,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="https://app.confconnects.com/conference/nbCZz3fX1pFSgGiOY9NZ/mypapers"
-                className="ml-3 px-4 py-2 bg-teal-DEFAULT text-white text-sm font-semibold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg hover:shadow-teal-DEFAULT/30 hover:-translate-y-0.5"
+                className="ml-2 2xl:ml-3 px-3.5 2xl:px-4 py-2 bg-teal-DEFAULT text-white text-xs 2xl:text-sm font-semibold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg hover:shadow-teal-DEFAULT/30 hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0"
               >
                 Submit Paper
               </Link>

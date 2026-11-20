@@ -8,6 +8,7 @@ const quickLinks = [
   { href: "/call-for-papers", label: "Call for Papers" },
   { href: "/key-dates", label: "Key Dates" },
   { href: "/registration", label: "Registration" },
+  { href: "/keynote-plenary", label: "Keynote & Plenary Talks" },
   { href: "/committees", label: "Committees" },
   { href: "/venue", label: "Venue" },
   { href: "/contact", label: "Contact" },

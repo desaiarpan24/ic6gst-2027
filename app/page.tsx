@@ -41,6 +41,7 @@ const highlights = [
     icon: Mic,
     title: "Keynote & Plenary Talks",
     desc: "Keynote and plenary talks by leading experts from academia, industry and the Bharat 6G ecosystem on AI, 6G networks and sustainable technologies.",
+    link: "/keynote-plenary",
   },
   {
     icon: Cpu,
@@ -331,7 +332,16 @@ export default function HomePage() {
                     />
                   </div>
                   <h3 className="font-bold text-navy text-lg mb-2">{h.title}</h3>
-                  <p className="text-slate-light text-sm leading-relaxed">{h.desc}</p>
+                  <p className="text-slate-light text-sm leading-relaxed mb-3">{h.desc}</p>
+                  {h.link && (
+                    <Link
+                      href={h.link}
+                      className="mt-auto inline-flex items-center justify-center gap-1.5 text-xs font-bold text-teal-DEFAULT hover:text-teal-600 transition-colors pt-2 border-t border-gray-100"
+                    >
+                      <span>View Speakers & Details</span>
+                      <ArrowRight size={12} />
+                    </Link>
+                  )}
                 </div>
               </AnimatedSection>
             ))}
