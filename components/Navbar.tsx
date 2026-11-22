@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/call-for-papers", label: "Call for Papers" },
   { href: "/key-dates", label: "Key Dates" },
   { href: "/registration", label: "Registration" },
-  { href: "/keynote-plenary", label: "Keynote & Plenary Talks" },
+  { href: "/keynote-plenary", label: "Keynote & Plenary" },
   { href: "/committees", label: "Committees" },
   { href: "/venue", label: "Venue" },
   { href: "/contact", label: "Contact" },
@@ -49,37 +49,37 @@ export default function Navbar() {
             : "bg-white border-b border-gray-100"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative h-10 w-auto flex-shrink-0">
-                <Logo className="h-10 w-auto" />
+        <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 gap-3 lg:gap-4 xl:gap-6">
+            {/* Logo - protected with flex-shrink-0 so tabs never overlap */}
+            <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0 z-10">
+              <div className="relative h-9 sm:h-10 w-auto flex-shrink-0">
+                <Logo className="h-9 sm:h-10 w-auto" />
               </div>
-              <div className="flex flex-col leading-tight">
-                <div className="flex items-center gap-1.5">
-                  <span className="px-2 py-0.5 rounded-md bg-[#0F172A] border border-slate-700/60 font-black text-base tracking-tight shadow-xs inline-flex items-center gap-0.5">
+              <div className="flex flex-col leading-tight flex-shrink-0">
+                <div className="flex items-center gap-1.5 flex-shrink-0">
+                  <span className="px-2 py-0.5 rounded-md bg-[#0F172A] border border-slate-700/60 font-black text-sm sm:text-base tracking-tight shadow-xs inline-flex items-center gap-0.5 flex-shrink-0">
                     <span className="font-ic text-[#FF9933]">IC</span>
                     <span className="font-6g text-white tracking-wider">6G</span>
                     <span className="font-st text-[#22c55e]">ST</span>
                   </span>
-                  <span className="text-navy font-sans font-black text-lg">2027</span>
+                  <span className="text-navy font-sans font-black text-base sm:text-lg whitespace-nowrap">2027</span>
                 </div>
-                <span className="text-[11px] text-slate-500 hidden sm:block">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 hidden sm:block whitespace-nowrap">
                   PDEU, Gandhinagar
                 </span>
               </div>
             </Link>
 
-            {/* Desktop nav */}
-            <nav className="hidden xl:flex items-center gap-0.5 2xl:gap-1">
+            {/* Desktop nav - responsive padding & whitespace protection */}
+            <nav className="hidden xl:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5 flex-shrink-0">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`nav-link px-2.5 2xl:px-3 py-2 rounded-md text-xs 2xl:text-sm font-medium transition-colors whitespace-nowrap ${
+                  className={`nav-link px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-md text-xs xl:text-[13px] 2xl:text-sm font-medium transition-colors whitespace-nowrap ${
                     pathname === link.href
-                      ? "text-teal-DEFAULT bg-teal-DEFAULT/10 font-semibold"
+                      ? "text-teal-DEFAULT bg-teal-DEFAULT/10 font-bold"
                       : "text-slate-body hover:text-teal-DEFAULT hover:bg-gray-50"
                   }`}
                 >
@@ -88,7 +88,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="https://app.confconnects.com/conference/nbCZz3fX1pFSgGiOY9NZ/mypapers"
-                className="ml-2 2xl:ml-3 px-3.5 2xl:px-4 py-2 bg-teal-DEFAULT text-white text-xs 2xl:text-sm font-semibold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg hover:shadow-teal-DEFAULT/30 hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0"
+                className="ml-2 xl:ml-2.5 2xl:ml-3 px-3.5 xl:px-4 py-2 bg-teal-DEFAULT text-white text-xs xl:text-xs 2xl:text-sm font-semibold rounded-full hover:bg-teal-600 transition-all hover:shadow-lg hover:shadow-teal-DEFAULT/30 hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0"
               >
                 Submit Paper
               </Link>

@@ -96,11 +96,11 @@ export default function FeeTable({ activeCurrency }: FeeTableProps = {}) {
               </th>
               <th className={`text-right px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15.5%] transition-colors ${activeCurrency === "INR" ? "bg-slate-800 text-teal-300" : ""}`}>
                 <span>Early Bird (INR)</span>
-                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">incl. GST • by 31 Jul</span>
+                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">excl. GST • by 31 Jul</span>
               </th>
               <th className={`text-right px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15.5%] transition-colors ${activeCurrency === "INR" ? "bg-slate-800 text-teal-300" : ""}`}>
                 <span>Final (INR)</span>
-                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">1–25 Aug (+10%)</span>
+                <span className="block text-[10px] sm:text-xs font-normal text-slate-300 leading-tight">1–25 Aug (+10%) • excl. GST</span>
               </th>
               <th className={`text-right px-2 sm:px-3 md:px-4 py-3.5 font-semibold w-[15%] transition-colors ${activeCurrency === "USD" ? "bg-slate-800 text-teal-300" : ""}`}>
                 <span>USD Early</span>
@@ -159,7 +159,7 @@ export default function FeeTable({ activeCurrency }: FeeTableProps = {}) {
             The registration fees for authors include the US$5 per accepted paper charged by ConfConnects for the AI-content check.
           </li>
           <li>
-            INR fees include 18% GST. USD fees apply to authors and participants from outside India.
+            Registration fees are exclusive of GST (18% GST applicable as per Government of India norms). USD fees apply to authors and participants from outside India.
           </li>
           <li>
             IEEE members receive at least 15% discount. IEEE Gujarat Section members receive an additional 5% discount on the IEEE member rate (valid membership number required).
