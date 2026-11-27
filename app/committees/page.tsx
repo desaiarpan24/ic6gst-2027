@@ -304,6 +304,14 @@ const advisoryData: CommitteeRole[] = [
         name: "Dr. Aakash Bansal (he/him)",
         affiliation: "Assistant Professor, Loughborough University, UK",
       },
+      {
+        name: "Dr. C.J. Reddy",
+        affiliation: "Fellow, Siemens, USA",
+      },
+      {
+        name: "Mr. Jay Patel",
+        affiliation: "RF Antenna Developer, Ericsson, USA",
+      },
     ],
   },
 ];
